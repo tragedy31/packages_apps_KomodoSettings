@@ -201,4 +201,14 @@
     <string name="smart_charging_switch_title">Use Smart charging</string>
     <string name="smart_charging_level_title">Trigger level</string>
     <string name="smart_charging_footer">Smart Charging allows you to set maximum charging level to extend the lifespan of your battery</string>
+
+    <!-- Statusbar logo -->
+    <string name="status_bar_logo_category_title">Statusbar Logo</string>
+    <string name="status_bar_logo_category_summary">Enable to display logo in the status bar</string>
+    <string name="status_bar_logo_title">Komodo logo</string>
+    <string name="status_bar_logo_right">Right</string>
+    <string name="status_bar_logo_left">Left</string>
+    <string name="status_bar_logo_disabled">Disabled</string>
+    <string name="status_bar_logo_style_title">Komodo logo style</string>
+    <string name="status_bar_logo_color_title">Select color</string>
 </resources>
