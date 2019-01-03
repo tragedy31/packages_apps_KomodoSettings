@@ -16,6 +16,13 @@
 package com.komodo.settings.fragments;
 
 import android.content.Context;
+import android.os.Bundle;
+import android.os.UserHandle;
+import android.os.UserHandle;
+import android.os.SystemProperties;
+
+import android.provider.SearchIndexableResource;
+import android.provider.Settings;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -35,8 +42,30 @@ import com.android.settings.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Interface extends DashboardFragment {
-    private static final String TAG = "Interface";
+@SearchIndexable
+public class Interface extends DashboardFragment
+        implements Preference.OnPreferenceChangeListener, Indexable {
+
+    public static final String TAG = "Interface";
+
+    private static final String PREF_KEY_CUTOUT = "cutout_settings";
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        addPreferencesFromResource(R.xml.komodo_settings_interface);
+
+        PreferenceScreen prefScreen = getPreferenceScreen();
+
+        Preference mCutoutPref = (Preference) findPreference(PREF_KEY_CUTOUT);
+        if (!hasPhysicalDisplayCutout(getContext()))
+            getPreferenceScreen().removePreference(mCutoutPref);
+    }
+
+    private static boolean hasPhysicalDisplayCutout(Context context) {
+        return context.getResources().getBoolean(
+                com.android.internal.R.bool.config_physicalDisplayCutout);
+    }
 
     @Override
     public int getMetricsCategory() {
@@ -51,11 +80,6 @@ public class Interface extends DashboardFragment {
     @Override
     protected int getPreferenceScreenResId() {
         return R.xml.komodo_settings_interface;
-    }
-
-    @Override
-    public void onCreate(Bundle icicle) {
-        super.onCreate(icicle);
     }
 
     @Override
