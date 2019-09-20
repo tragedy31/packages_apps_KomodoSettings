@@ -166,6 +166,9 @@
     <string name="hardware_keys_category">Hardware keys</string>
     <string name="hardware_keys_disable_title">Disable keys</string>
 
+    <!-- Navbar Invert -->
+    <string name="navbar_invert_layout_title">Invert layout</string>
+
     <!-- Double Tap gestures -->
     <string name="double_tap_sleep_lockscreen_title">Double tap to sleep</string>
     <string name="double_tap_sleep_lockscreen_summary">Double tap anywhere on the lockscreen to put phone to sleep</string>
