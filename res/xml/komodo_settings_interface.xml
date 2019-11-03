@@ -22,4 +22,22 @@
         android:key="interface_animation"
         android:layout="@layout/theming_animation" />
 
+    <PreferenceCategory
+        android:key="brightness_slider"
+        android:title="@string/qs_brightness_title">
+
+        <com.komodo.settings.preferences.SecureSettingListPreference
+            android:key="qs_show_brightness_slider"
+            android:title="@string/brightness_slider_title"
+            android:entries="@array/brightness_slider_entries"
+            android:entryValues="@array/brightness_slider_values"
+            android:defaultValue="1" />
+
+        <com.komodo.settings.preferences.SecureSettingSwitchPreference
+            android:key="qs_show_auto_brightness"
+            android:title="@string/brightness_icon_title"
+            android:summary="@string/brightness_icon_summary"
+            android:defaultValue="true" />
+    </PreferenceCategory>
+
 </PreferenceScreen>
