@@ -25,22 +25,39 @@ import android.os.UserHandle;
 import android.provider.Settings;
 import androidx.preference.*;
 
-import com.android.internal.logging.nano.MetricsProto; 
+import com.android.internal.logging.nano.MetricsProto;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.komodo.settings.preference.SystemSettingSwitchPreference;
 
 public class QuickSettings extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
 
+    private static final String STATUS_BAR_CUSTOM_HEADER = "status_bar_custom_header";
+
+    private SystemSettingSwitchPreference mCustomHeader;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.komodo_settings_quicksettings);  
+        addPreferencesFromResource(R.xml.komodo_settings_quicksettings);
+
+        mCustomHeader = (SystemSettingMasterSwitchPreference) findPreference(STATUS_BAR_CUSTOM_HEADER);
+        int qsHeader = Settings.System.getInt(resolver,
+                Settings.System.OMNI_STATUS_BAR_CUSTOM_HEADER, 0);
+        mCustomHeader.setChecked(qsHeader != 0);
+        mCustomHeader.setOnPreferenceChangeListener(this);
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (preference == mCustomHeader) {
+            boolean header = (Boolean) newValue;
+            Settings.System.putInt(resolver,
+                    Settings.System.OMNI_STATUS_BAR_CUSTOM_HEADER, header ? 1 : 0);
+            return true;
+        }
         return false;
     }
 
