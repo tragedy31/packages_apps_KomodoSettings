@@ -59,4 +59,10 @@
         android:summary="@string/tethering_allow_vpn_upstreams_summary"
         android:defaultValue="false" />
 
+    <!-- Doze -->
+    <com.komodo.settings.preferences.SystemSettingSwitchPreference
+        android:key="doze_on_charge"
+        android:defaultValue="false"
+        android:title="@string/doze_on_charge_title"
+        android:summary="@string/doze_on_charge_summary" />
 </PreferenceScreen>
