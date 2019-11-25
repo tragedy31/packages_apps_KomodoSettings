@@ -18,6 +18,20 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/quicksettings_title" >
 
+    <PreferenceCategory
+        android:key="qs_theme_category"
+        android:title="@string/qs_theme_category">
+
+        <com.komodo.settings.preferences.SystemSettingSeekBarPreference
+            android:key="qs_panel_bg_alpha"
+            android:title="@string/qs_panel_alpha_title"
+            android:max="255"
+            settings:min="100"
+            settings:interval="5"
+            android:defaultValue="255" />
+
+    </PreferenceCategory>
+
     <com.komodo.settings.preferences.SystemSettingSwitchPreference
         android:key="status_bar_custom_header"
         android:fragment="com.komodo.settings.fragments.QsHeader"
