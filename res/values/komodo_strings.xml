@@ -643,8 +643,11 @@
     <!-- Doze on charge -->
     <string name="doze_on_charge_title">Always on when charging</string>
     <string name="doze_on_charge_summary">Show doze screen all the time when charging</string>
-=======
-    <string name="qs_brightness_position_bottom_title">Brightness slider at bottom</string>
-    <string name="qs_brightness_position_bottom_summary">Show a brightness slider on bottom quick settings</string>
->>>>>>> parent of 2e89eaee... Add ambient pulse notification [2/2]
+
+   <!-- Ambient edge lighting -->
+    <string name="notification_screen_title">Screen</string>
+    <string name="pulse_ambient_light_title">Edge lighting</string>
+    <string name="pulse_ambient_light_summary">Light up the side edges of the screen on notification pulse</string>
+    <string name="pulse_ambient_light_color_title">Edge light color</string>
+    <string name="default_string">Default</string>
 </resources>
