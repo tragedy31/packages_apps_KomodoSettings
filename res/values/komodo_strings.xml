@@ -440,4 +440,8 @@
     <string name="notification_headers_title">Show notification headers</string>
     <string name="notification_headers_summary">Whether to show R style notification headers (Requires a SystemUI restart)</string>
 
+    <!-- QS Footer Text -->
+    <string name="footer_text_show_title">Display footer text</string>
+    <string name="footer_text_show_summary">Toogle to show custom text on qs footer</string>
+
 </resources>
