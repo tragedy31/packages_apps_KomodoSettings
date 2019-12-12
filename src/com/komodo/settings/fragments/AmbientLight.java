@@ -30,6 +30,7 @@ import android.provider.Settings;
 
 import com.android.settings.SettingsPreferenceFragment;
 
+import com.komodo.settings.preferences.AmbientLightSettingsPreview;
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
 public class AmbientLight extends SettingsPreferenceFragment implements Preference.OnPreferenceChangeListener {
@@ -46,6 +47,7 @@ public class AmbientLight extends SettingsPreferenceFragment implements Preferen
         mEdgeLightColorPreference = (ColorPickerPreference) findPreference(PULSE_AMBIENT_LIGHT_COLOR);
         int edgeLightColor = Settings.System.getInt(getContentResolver(),
                 Settings.System.PULSE_AMBIENT_LIGHT_COLOR, 0xFF3980FF);
+        AmbientLightSettingsPreview.setAmbientLightPreviewColor(edgeLightColor);
         mEdgeLightColorPreference.setNewPreviewColor(edgeLightColor);
         mEdgeLightColorPreference.setAlphaSliderEnabled(false);
         String edgeLightColorHex = String.format("#%08x", (0xFF3980FF & edgeLightColor));
@@ -67,6 +69,7 @@ public class AmbientLight extends SettingsPreferenceFragment implements Preferen
             } else {
                 preference.setSummary(hex);
             }
+            AmbientLightSettingsPreview.setAmbientLightPreviewColor(Integer.valueOf(String.valueOf(newValue)));
             int intHex = ColorPickerPreference.convertToColorInt(hex);
             Settings.System.putInt(getContentResolver(),
                     Settings.System.PULSE_AMBIENT_LIGHT_COLOR, intHex);
@@ -77,6 +80,6 @@ public class AmbientLight extends SettingsPreferenceFragment implements Preferen
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.CUSTOM_SETTINGS;
+        return MetricsProto.MetricsEvent.KOMODO_SETTINGS;
     }
-} 
+}
