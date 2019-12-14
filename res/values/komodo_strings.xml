@@ -356,7 +356,9 @@
     <string name="qs_columns_landscape_title">Columns (Landscape)</string>
     <string name="sysui_qqs_count_title">Columns (Quickbar)</string>
     <string name="qs_tile_title_visibility_title">Tile title</string>
-    <string name="qs_tile_title_visibility_summary">Display title below each tile</string> 
+    <string name="qs_tile_title_visibility_summary">Display title below each tile</string>
+    <string name="qs_rows_portrait_title">Rows (Portrait)</string>
+    <string name="qs_rows_landscape_title">Rows (Landscape)</string> 
 
     <!-- Three-fingers-swipe to screenshot -->
     <string name="three_finger_gesture">Swipe to screenshot</string>
