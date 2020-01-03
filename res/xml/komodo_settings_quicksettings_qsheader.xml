@@ -33,7 +33,7 @@
         android:persistent="false">
     </Preference>
 
-    <com.komodo.settings.preference.CustomSeekBarPreference
+    <com.komodo.settings.preferences.CustomSeekBarPreference
         android:key="status_bar_custom_header_shadow"
         android:title="@string/status_bar_custom_header_shadow_title"
         android:max="100"

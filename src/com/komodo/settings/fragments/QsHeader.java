@@ -32,8 +32,8 @@ import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-import com.komodo.settings.preference.CustomSeekBarPreference;
-import com.komodo.settings.preference.SystemSettingSwitchPreference;
+import com.komodo.settings.preferences.CustomSeekBarPreference;
+import com.komodo.settings.preferences.SystemSettingSwitchPreference;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -41,7 +41,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class QsHeader extends SettingsPreferenceFragment 
+public class QsHeader extends SettingsPreferenceFragment
              implements Preference.OnPreferenceChangeListener{
 
     private static final String CUSTOM_HEADER_BROWSE = "custom_header_browse";

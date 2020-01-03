@@ -18,10 +18,18 @@ package com.komodo.settings.fragments;
 import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.SystemProperties;
 import android.os.UserHandle;
+import androidx.preference.PreferenceCategory;
+import androidx.preference.ListPreference;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceScreen;
+import androidx.preference.Preference.OnPreferenceChangeListener;
+import androidx.preference.SwitchPreference;
 import android.provider.Settings;
 import androidx.preference.*;
 
@@ -29,7 +37,16 @@ import com.android.internal.logging.nano.MetricsProto;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
-import com.komodo.settings.preference.SystemSettingSwitchPreference;
+import com.komodo.settings.preferences.SystemSettingSwitchPreference;
+
+import com.android.internal.logging.nano.MetricsProto;
+import com.android.internal.statusbar.IStatusBarService;
+
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Locale;
 
 public class QuickSettings extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
@@ -43,7 +60,9 @@ public class QuickSettings extends SettingsPreferenceFragment
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.komodo_settings_quicksettings);
 
-        mCustomHeader = (SystemSettingMasterSwitchPreference) findPreference(STATUS_BAR_CUSTOM_HEADER);
+        ContentResolver resolver = getActivity().getContentResolver();
+
+        mCustomHeader = (SystemSettingSwitchPreference) findPreference(STATUS_BAR_CUSTOM_HEADER);
         int qsHeader = Settings.System.getInt(resolver,
                 Settings.System.OMNI_STATUS_BAR_CUSTOM_HEADER, 0);
         mCustomHeader.setChecked(qsHeader != 0);
@@ -52,6 +71,7 @@ public class QuickSettings extends SettingsPreferenceFragment
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        ContentResolver resolver = getActivity().getContentResolver();
         if (preference == mCustomHeader) {
             boolean header = (Boolean) newValue;
             Settings.System.putInt(resolver,
