@@ -29,5 +29,17 @@
             android:defaultValue="false" />
 
     </PreferenceCategory>
+    <PreferenceCategory
+        android:key="ls_clock"
+        android:title="@string/lockscreen_clock">
+
+        <com.komodo.settings.preferences.SecureSettingListPreference
+        android:key="lockscreen_clock_selection"
+        android:title="@string/lockscreen_clock_title"
+        android:dialogTitle="@string/lockscreen_clock_dialog_title"
+        android:entries="@array/lockscreen_clock_titles"
+        android:entryValues="@array/lockscreen_clock_values"
+        android:defaultValue="2" />
+    </PreferenceCategory>
 
 </PreferenceScreen>
