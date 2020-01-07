@@ -106,4 +106,14 @@
             android:defaultValue="6"
             android:persistent="false" />
 
+     <PreferenceCategory
+        android:key="qs_blur_category"
+        android:title="@string/qs_blur_category" />
+
+        <com.komodo.settings.preferences.SystemSettingSwitchPreference
+            android:key="qs_blur"
+            android:title="@string/blur_quicksettings"
+            android:summary="@string/blur_quicksettings_subtitle"
+            android:defaultValue="true" />
+
 </PreferenceScreen>

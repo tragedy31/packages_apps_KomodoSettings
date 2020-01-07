@@ -354,4 +354,9 @@
     <string name="three_finger_gesture">Swipe to screenshot</string>
     <string name="three_finger_gesture_summary">Swipe down with three fingers to take a screenshot</string>
 
+    <!-- QS Blur -->
+    <string name="qs_blur_category">Blur</string>
+    <string name="blur_quicksettings">Blur behind quick settings (beta)</string>
+    <string name="blur_quicksettings_subtitle">blurs darkened background behind quick settings</string>
+
 </resources>
