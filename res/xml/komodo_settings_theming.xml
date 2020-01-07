@@ -18,4 +18,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <net.margaritov.preference.colorpicker.ColorPickerPreference
+        android:key="accent_color"
+        android:title="@string/accent_color"
+        android:summary="@string/accent_summary"
+        android:defaultValue="0xffffff"
+        android:persistent="false" />
+
 </PreferenceScreen>

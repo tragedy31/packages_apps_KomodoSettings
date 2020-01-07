@@ -15,29 +15,34 @@
  */
 package com.komodo.settings.fragments;
 
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.DialogFragment;
 import android.content.Context;
 import android.content.ContentResolver;
+import android.content.DialogInterface;
+import android.content.res.Resources;
+import android.content.om.IOverlayManager;
+import android.content.om.OverlayInfo;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.os.RemoteException;
+import android.os.SystemProperties;
+import android.os.ServiceManager;
 import android.os.UserHandle;
-import android.provider.Settings;
-
+import androidx.preference.ListPreference;
 import androidx.preference.Preference;
-import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
+import androidx.preference.Preference.OnPreferenceChangeListener;
+import androidx.preference.SwitchPreference;
+import android.provider.Settings;
+import com.android.settings.R;
 
 import com.android.internal.logging.nano.MetricsProto;
-import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 
-import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
-import com.android.settingslib.search.SearchIndexable;
 import com.android.settings.search.BaseSearchIndexProvider;
-
-import com.komodo.settings.preferences.SystemSettingMasterSwitchPreference;
-import com.komodo.settings.preferences.CustomSeekBarPreference;
-import com.komodo.settings.preferences.SystemSettingSeekBarPreference;
-import com.komodo.settings.preferences.SystemSettingSwitchPreference;
-import com.komodo.settings.preferences.GlobalSettingMasterSwitchPreference;
 
 import java.util.Arrays;
 import java.util.ArrayList;
@@ -45,12 +50,18 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
 
+import net.margaritov.preference.colorpicker.ColorPickerPreference;
+
 public class Theming extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
 
     public static final String TAG = "Theming";
+    private static final String ACCENT_COLOR = "accent_color";
+    private static final String ACCENT_COLOR_PROP = "persist.sys.theme.accentcolor";
 
     private Context mContext;
+    private IOverlayManager mOverlayService;
+    private ColorPickerPreference mThemeColor;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -59,19 +70,41 @@ public class Theming extends SettingsPreferenceFragment
         mContext = getActivity();
         getActivity().setTitle(R.string.theming_title);
 
-        PreferenceScreen prefScreen = getPreferenceScreen();
-        ContentResolver resolver = getActivity().getContentResolver();
+        // RGB accent
+        mOverlayService = IOverlayManager.Stub
+                .asInterface(ServiceManager.getService(Context.OVERLAY_SERVICE));
+        setupAccentPref();
     }
 
      @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        ContentResolver resolver = getActivity().getContentResolver();
-        return false;
+        if (preference == mThemeColor) {
+            int color = (Integer) newValue;
+            String hexColor = String.format("%08X", (0xFFFFFFFF & color));
+            SystemProperties.set(ACCENT_COLOR_PROP, hexColor);
+            try {
+                 mOverlayService.reloadAndroidAssets(UserHandle.USER_CURRENT);
+                 mOverlayService.reloadAssets("com.android.settings", UserHandle.USER_CURRENT);
+                 mOverlayService.reloadAssets("com.android.systemui", UserHandle.USER_CURRENT);
+             } catch (RemoteException ignored) {
+             }
+        }
+        return true;
+    }
+
+    private void setupAccentPref() {
+        mThemeColor = (ColorPickerPreference) findPreference(ACCENT_COLOR);
+        String colorVal = SystemProperties.get(ACCENT_COLOR_PROP, "-1");
+        int color = "-1".equals(colorVal)
+                ? Color.WHITE
+                : Color.parseColor("#" + colorVal);
+        mThemeColor.setNewPreviewColor(color);
+        mThemeColor.setOnPreferenceChangeListener(this);
     }
 
     @Override
     public int getMetricsCategory() {
-        return MetricsEvent.KOMODO_SETTINGS;
+        return MetricsProto.MetricsEvent.KOMODO_SETTINGS;
     }
 
     protected String getLogTag() {
