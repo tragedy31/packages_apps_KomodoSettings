@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-    Copyright © 2018-19 The rebellion OS Project
-    Copyright © 2019 Ancient OS Project
+    Copyright © 2020 The Komodo OS Project
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -18,7 +17,7 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="komodo_settings_title">Komodo Features</string>
-    <string name="komodo_dashboard_summary">Komodo Island</string>
+    <string name="komodo_dashboard_summary">Original from indonesia</string>
 	
     <!-- Categories -->
     <string name="about_title">About</string>
