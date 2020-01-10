@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright © 2020 The Komodo OS Project
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="komodo_settings_title">Komodo pitur</string>
+    <string name="komodo_dashboard_summary">Kearipan lokal</string>
+
+    <!-- Categories -->
+    <string name="about_title">Tentang</string>
+    <string name="animations_title">Animasi</string>
+    <string name="buttons_title">Tombol</string>
+    <string name="gestures_title">Gestur</string>
+    <string name="lockscreen_title">Lock Screen</string>
+    <string name="misc_title">Lain-lain</string>
+    <string name="navigation_title">Navigasi Bar</string>
+    <string name="notifications_title">Notifikasi</string>
+    <string name="panels_title">Panel</string>
+    <string name="quicksettings_title">Pengaturan cepat (QS)</string>
+    <string name="statusbar_title">Status Bar</string>
+    <string name="battery_title">Baterai</string>
+    <string name="interface_title">Theming</string>
+
+    <!-- General strings -->
+    <string name="ok">OK</string>
+    <string name="reset">Reset</string>
+    <string name="cancel">Batal</string>
+    <string name="save">Simpan</string>
+
+    <!-- Color Picker -->
+    <string name="dialog_color_picker">Color Picker</string>
+    <string name="press_color_to_apply">Tekan pada warna di bawah ini untuk menerapkan</string>
+    <string name="arrow_right">→</string>
+    <string name="arrow_down">↓</string>
+    <string name="hex">Hex:</string>
+    <string name="hex_hint">#ff000000</string>
+    <string name="set">Set</string>
+    <string name="color_default">Default</string>
+
+    <!-- Navbar tuner -->
+    <string name="navbar_tuner_title">Tombol Navbar</string>
+
+    <!-- Statusbar net monitor -->
+    <string name="network_traffic_state_title">Lalu lintas internet</string>
+    <string name="network_traffic_state_summary">Tampilkan aktifitas internet di statusbar</string>
+    <string name="network_traffic_autohide_threshold_title">Otomatis menghilang saat tidak ada aktifitas internet (KB/s)</string>
+    <string name="network_traffic_hidearrow">Sembunyikan panah</string>
+    <string name="network_traffic_hidearrow_summary">Sembunyikan panah indikator internet</string>
+
+    <!-- Custom headers -->
+    <string name="custom_header_pick_summary">Pilih gambar dari koleksi gambar yang sudah diinstal sebelumnya</string>
+    <string name="custom_header_pick_title">Pilih gambar dari koleksi</string>
+    <string name="custom_header_provider_title">Jenis gambar</string>
+    <string name="daylight_header_pack_title">Koleksi gambar</string>
+    <string name="daylight_header_provider_title">Otomatis (Base Waktu)</string>
+    <string name="file_header_provider_title">Statis</string>
+    <string name="file_header_select_summary">Select an image from internal storage</string>
+    <string name="file_header_select_title">Pilih gambar dari penyimpanan</string>
+    <string name="header_provider_disabled">Nonaktifkan</string>
+    <string name="status_bar_custom_header_shadow_title">Gelapkan gambar</string>
+    <string name="status_bar_custom_header_summary">Gunakan gambar khusus untuk header QS</string>
+    <string name="status_bar_custom_header_title">Gambar header</string>
+
+	<!-- Theming -->
+	<string name="theme_select_title">Tema</string>
+	<string name="theme_select_summary">Jelajahi dan pilih tema yang diinstal</string>
+</resources>
