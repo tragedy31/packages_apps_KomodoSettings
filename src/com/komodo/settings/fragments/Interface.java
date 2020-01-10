@@ -1,6 +1,5 @@
 /*
- * Copyright (C) 2019 Rebellion-OS
- * Copyright (C) 2019 Ancient-OS
+ * Copyright (C) 2020 Komodo OS
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,6 +18,7 @@ package com.komodo.settings.fragments;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
@@ -27,7 +27,7 @@ import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.SwitchPreference;
 import android.provider.Settings;
 
-import com.android.internal.logging.nano.MetricsProto; 
+import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.SettingsPreferenceFragment;
 
 import com.android.settings.R;
@@ -36,11 +36,23 @@ public class Interface extends SettingsPreferenceFragment {
 
     public static final String TAG = "Interface";
 
+    private Preference mThemeBrowse;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.komodo_settings_interface);
+
+        mThemeBrowse = findPreference("theme_select_activity");
+        mThemeBrowse.setEnabled(isBrowseThemeAvailable());
+    }
+
+    private boolean isBrowseThemeAvailable() {
+        PackageManager pm = getPackageManager();
+        Intent browse = new Intent();
+        browse.setClassName("com.android.customization", "com.android.customization.picker.CustomizationPickerActivity");
+        return pm.resolveActivity(browse, 0) != null;
     }
 
     @Override

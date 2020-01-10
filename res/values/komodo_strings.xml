@@ -33,7 +33,7 @@
     <string name="quicksettings_title">Quick Settings</string>
     <string name="statusbar_title">Status Bar</string>
     <string name="battery_title">Battery</string>
-    <string name="interface_title">Themes</string>
+    <string name="interface_title">Theming</string>
 	
     <!-- General strings -->
     <string name="ok">OK</string>
@@ -76,4 +76,8 @@
     <string name="status_bar_custom_header_shadow_title">Darken image</string>
     <string name="status_bar_custom_header_summary">Use a custom image for QS header</string>
     <string name="status_bar_custom_header_title">Header image</string>
+
+   <!-- Theming -->
+   <string name="theme_select_title">Themes</string>
+   <string name="theme_select_summary">Browse and select installed themes</string>
 </resources>
