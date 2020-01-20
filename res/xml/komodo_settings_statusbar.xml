@@ -38,6 +38,11 @@
         android:dependency="network_traffic_state"
         android:defaultValue="false" />
 
+    <Preference
+        android:key="carrier_label"
+        android:title="@string/status_carrier_title"
+        android:fragment="com.komodo.settings.fragments.CarrierLabel" />
+
     <PreferenceCategory
         android:key="statusbar_gestures"
         android:title="@string/gestures_title">
