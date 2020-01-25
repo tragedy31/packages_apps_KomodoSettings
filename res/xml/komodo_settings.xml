@@ -24,7 +24,7 @@
             android:key="about_catagory"
             android:title="@string/about_title"
             android:fragment="com.komodo.settings.fragments.About"
-            android:icon="@drawable/ic_settings_about"/>
+            android:icon="@drawable/ic_settings_komodo_about"/>
 
     <PreferenceCategory
             android:key="features"
