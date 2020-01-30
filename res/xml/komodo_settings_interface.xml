@@ -369,5 +369,12 @@
               android:persistent="false" />
         
       </PreferenceCategory>
-      
+
+    <PreferenceScreen 
+         android:key="rounded_corners" 
+         android:title="@string/corners_title" 
+         android:summary="@string/corners_summary"
+         android:fragment="com.komodo.settings.fragments.RoundedCornersSettings" />
+
+
 </PreferenceScreen>
