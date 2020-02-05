@@ -18,4 +18,116 @@ limitations under the License.
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/about_title" >
 
+		<PreferenceCategory
+			android:key="about"
+			android:title="@string/dev_info" >
+
+			<Preference
+				android:summary="@string/komodo_about_info_summary" >
+				<intent
+					android:action="android.intent.action.VIEW"
+					android:data="https://github.com/Komodo-OS-Rom" />
+			</Preference>
+
+			<Preference
+				android:title="@string/github"
+				android:summary="@string/github_description"
+				android:icon="@drawable/ic_github" >
+				<intent
+					android:action="android.intent.action.VIEW"
+					android:data="https://github.com/Komodo-OS-Rom" />
+			</Preference>
+
+			<Preference
+				android:title="@string/telegram"
+				android:summary="@string/telegram_description"
+				android:icon="@drawable/ic_telegram" >
+				<intent
+					android:action="android.intent.action.VIEW"
+					android:data="https://t.me/KomodOSGroup" />
+			</Preference>
+
+			<Preference
+				android:title="@string/web_description"
+				android:summary="@string/web"
+				android:icon="@drawable/ic_web" >
+				<intent
+					android:action="android.intent.action.VIEW"
+					android:data="https://kryptonproject.org" />
+			</Preference>
+
+			<Preference
+				android:title="@string/donate_description"
+				android:summary="@string/donate"
+				android:icon="@drawable/ic_donate" >
+				<intent
+					android:action="android.intent.action.VIEW"
+					android:data="https://www.paypal.me/KomodoOS" />
+			</Preference>
+
+		</PreferenceCategory>
+
+		<PreferenceCategory
+			android:key="leads"
+			android:title="@string/leads" >
+
+			<Preference
+				android:title="@string/dev_1"
+				android:summary="@string/dev1_description"
+				android:icon="@drawable/ic_devs" >
+				<intent
+					android:action="android.intent.action.VIEW"
+					android:data="https://t.me/Kry9toN" />
+			</Preference>
+
+			<Preference
+				android:title="@string/dev_2"
+				android:summary="@string/dev2_description"
+				android:icon="@drawable/ic_devs" >
+				<intent
+					android:action="android.intent.action.VIEW"
+					android:data="https://t.me/aarunalr" />
+			</Preference>
+
+			<Preference
+				android:title="@string/dev_4"
+				android:summary="@string/dev4_description"
+				android:icon="@drawable/ic_devs" >
+				<intent
+					android:action="android.intent.action.VIEW"
+					android:data="https://t.me/najahiii" />
+			</Preference>
+
+			<Preference
+				android:title="@string/dev_5"
+				android:summary="@string/dev5_description"
+				android:icon="@drawable/ic_devs" >
+				<intent
+					android:action="android.intent.action.VIEW"
+					android:data="https://t.me/trisf" />
+			</Preference>
+
+		</PreferenceCategory>
+
+		<PreferenceCategory
+			android:key="designers"
+			android:title="@string/designers" >
+
+			<Preference
+				android:title="@string/dev_3"
+				android:summary="@string/designers"
+				android:icon="@drawable/ic_design">
+				<intent
+					android:action="android.intent.action.VIEW"
+					android:data="https://t.me/fakhrun39" />
+			</Preference>
+
+		</PreferenceCategory>
+
+		<PreferenceCategory
+			android:key="maintainers"
+			android:title="@string/maintainers" >
+
+		</PreferenceCategory>
+
 </PreferenceScreen>

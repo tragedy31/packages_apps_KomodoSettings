@@ -19,12 +19,18 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/komodo_settings_title" >
 
+	<PreferenceCategory
+		android:key="about rom"
+		android:title="@string/komodo_about_rom" >
+
         <!-- About -->
         <Preference
             android:key="about_catagory"
             android:title="@string/about_title"
             android:fragment="com.komodo.settings.fragments.About"
             android:icon="@drawable/ic_settings_komodo_about"/>
+
+	</PreferenceCategory>
 
     <PreferenceCategory
             android:key="features"

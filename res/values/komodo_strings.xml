@@ -20,7 +20,7 @@
     <string name="komodo_dashboard_summary">Original from indonesia</string>
 	
     <!-- Categories -->
-    <string name="about_title">About</string>
+    <string name="about_title">About Komodo and our Team</string>
     <string name="animations_title">Animations</string>
     <string name="buttons_title">Buttons</string>
     <string name="gestures_title">Gestures</string>
@@ -49,6 +49,32 @@
     <string name="hex_hint">#ff000000</string>
     <string name="set">Set</string>
     <string name="color_default">Default</string>
+
+    <!-- About KomodOS -->
+    <string name="komodo_about_rom">About</string>
+    <string name="komodo_about_info_summary">Komodo OS is an AOSP/CAF based Rom with customizations</string>
+    <string name="dev_info">About Teams</string>
+    <string name="leads">Team Leads</string>
+    <string name="github">Github</string>
+    <string name="github_description">View our source code</string>
+    <string name="telegram">Telegram</string>
+    <string name="telegram_description">Join our Telegram discussion group</string>
+    <string name="web">Download Center</string>
+    <string name="web_description">Visit our download portal</string>
+    <string name="maintainers">Maintainers</string>
+    <string name="dev_1">Dhimas Bagus Prayoga</string>
+    <string name="dev1_description">Founder, Device maintainer</string>
+    <string name="dev_2">Harun Al Rasyid</string>
+    <string name="dev2_description">Core Devs, Device maintainer</string>
+    <string name="dev_3">Tzuyu</string>
+    <string name="designers">Designers</string>
+    <string name="dev_4">Ahmad Thoriq Najahi</string>
+    <string name="dev4_description">Core Devs, Device maintainer</string>
+    <string name="dev_5">Trisf</string>
+    <string name="dev5_description">Website creator</string>
+    <string name="maintainer_description">Maintains for %1$s</string>
+    <string name="donate">Donate</string>
+    <string name="donate_description">Support Us</string>
 
     <!-- Navbar tuner -->
     <string name="navbar_tuner_title">Navbar buttons</string>
@@ -97,7 +123,7 @@
     <!-- Enable keys backlight-->
     <string name="button_brightness_title">Backlight</string>
     
-        <!-- Enable keys backlight-->
+    <!-- Enable keys backlight-->
     <string name="button_brightness_sw_title">Enable backlight</string>
     <string name="button_backlight_on_touch_only_title">Button touch</string>
     <string name="button_backlight_on_touch_only_summary">Enable backlight with timeout only on button touch</string>
