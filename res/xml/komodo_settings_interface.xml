@@ -17,16 +17,27 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/interface_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    
+    <PreferenceCategory
+        android:key="theme_customization_category">
 
-    <Preference
-        android:persistent="false"
-        android:title="@string/theme_select_title"
-        android:key="theme_select_activity"
-        android:summary="@string/theme_select_summary">
-    <intent
-        android:targetPackage="com.android.customization"
-        android:action="android.intent.action.MAIN"
-        android:targetClass="com.android.customization.picker.CustomizationPickerActivity" />
-    </Preference>
+        <ListPreference
+            android:key="android.theme.customization.pill_gesture"
+            android:title="@string/theme_customization_pill_gesture_title"/>
+
+        <ListPreference
+            android:key="android.theme.customization.statusbar_height"
+            android:title="@string/theme_customization_statusbar_height_title"/>
+
+        <ListPreference
+            android:key="android.theme.customization.ui_radius"
+            android:title="@string/theme_customization_ui_radius_title"/>
+
+        <ListPreference
+            android:key="android.theme.customization.ui_radius_vol"
+            android:title="@string/theme_customization_ui_radius_vol_title"/>
+
+    </PreferenceCategory>
+
 
 </PreferenceScreen>
