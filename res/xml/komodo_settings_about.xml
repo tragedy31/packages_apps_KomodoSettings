@@ -81,6 +81,15 @@ limitations under the License.
 			</Preference>
 
 			<Preference
+				android:title="@string/dev_6"
+				android:summary="@string/dev6_description"
+				android:icon="@drawable/ic_devs" >
+				<intent
+					android:action="android.intent.action.VIEW"
+					android:data="https://t.me/alanndz" />
+			</Preference>
+
+			<Preference
 				android:title="@string/dev_2"
 				android:summary="@string/dev2_description"
 				android:icon="@drawable/ic_devs" >
