@@ -37,7 +37,7 @@ import com.android.internal.logging.nano.MetricsProto;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
-import com.komodo.settings.preferences.SystemSettingSwitchPreference;
+import com.komodo.settings.preferences.SystemSettingMasterSwitchPreference;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.internal.statusbar.IStatusBarService;
@@ -53,7 +53,7 @@ public class QuickSettings extends SettingsPreferenceFragment
 
     private static final String STATUS_BAR_CUSTOM_HEADER = "status_bar_custom_header";
 
-    private SystemSettingSwitchPreference mCustomHeader;
+    private SystemSettingMasterSwitchPreference mCustomHeader;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -62,7 +62,7 @@ public class QuickSettings extends SettingsPreferenceFragment
 
         ContentResolver resolver = getActivity().getContentResolver();
 
-        mCustomHeader = (SystemSettingSwitchPreference) findPreference(STATUS_BAR_CUSTOM_HEADER);
+        mCustomHeader = (SystemSettingMasterSwitchPreference) findPreference(STATUS_BAR_CUSTOM_HEADER);
         int qsHeader = Settings.System.getInt(resolver,
                 Settings.System.OMNI_STATUS_BAR_CUSTOM_HEADER, 0);
         mCustomHeader.setChecked(qsHeader != 0);
