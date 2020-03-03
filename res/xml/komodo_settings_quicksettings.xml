@@ -32,7 +32,7 @@
 
     </PreferenceCategory>
 
-    <com.komodo.settings.preferences.SystemSettingSwitchPreference
+    <com.komodo.settings.preferences.SystemSettingMasterSwitchPreference
         android:key="status_bar_custom_header"
         android:fragment="com.komodo.settings.fragments.QsHeader"
         android:title="@string/status_bar_custom_header_title"
