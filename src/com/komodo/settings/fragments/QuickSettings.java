@@ -121,6 +121,12 @@ public class QuickSettings extends SettingsPreferenceFragment
             updateTileAnimationInterpolatorSummary(tileAnimationInterpolator);
             return true;
         }
+        if (preference == mCustomHeader) {
+            boolean header = (Boolean) newValue;
+            Settings.System.putInt(resolver,
+                    Settings.System.OMNI_STATUS_BAR_CUSTOM_HEADER, header ? 1 : 0);
+            return true;
+        }
         return false;
     }
 
@@ -152,18 +158,6 @@ public class QuickSettings extends SettingsPreferenceFragment
                 mTileAnimationInterpolator.setSelectable(true);
             }
         }
-    }
-
-    @Override
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-        ContentResolver resolver = getActivity().getContentResolver();
-        if (preference == mCustomHeader) {
-            boolean header = (Boolean) newValue;
-            Settings.System.putInt(resolver,
-                    Settings.System.OMNI_STATUS_BAR_CUSTOM_HEADER, header ? 1 : 0);
-            return true;
-        }
-        return false;
     }
 
     @Override
