@@ -264,19 +264,6 @@
     <string name="battery_fully_charged_notif_title">Battery fully charged</string>
     <string name="battery_fully_charged_notif_summary">Show a notification when the battery is fully charged</string>
 
-    <!-- Battery -->
-    <string name="battery_category_title">Battery</string>
-    <string name="status_bar_battery_style_title">Battery icon style</string>
-    <string name="status_bar_battery_style_icon_portrait">Portrait</string>
-    <string name="status_bar_battery_style_circle">Circle</string>
-    <string name="status_bar_battery_style_dotted_circle">Circle (Dotted)</string>
-    <string name="status_bar_battery_style_filled_circle">Circle (Filled)</string>
-    <string name="status_bar_battery_style_hidden">Hidden</string>
-    <string name="battery_percentage_title">Battery percentage</string>
-    <string name="battery_percentage_off">Disabled</string>
-    <string name="battery_percentage_on">Enabled</string>
-    <string name="battery_percentage_charging">Enabled (While charging)</string>
-
     <!-- AOKP custom system animations -->
     <string name="system_animation_title">System</string>
     <string name="activity_open_title">Activity open animation</string>
