@@ -18,34 +18,42 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/statusbar_title" >
 
-    <com.komodo.settings.preferences.SystemSettingSwitchPreference
-        android:key="network_traffic_state"
-        android:title="@string/network_traffic_state_title"
-        android:summary="@string/network_traffic_state_summary"
-        android:defaultValue="true" />
+    <PreferenceCategory
+        android:key="network_traffic"
+        android:title="@string/network_traffic_category_title"/>
 
-    <com.komodo.settings.preferences.CustomSeekBarPreference
-        android:key="network_traffic_autohide_threshold"
-        android:title="@string/network_traffic_autohide_threshold_title"
-        android:max="10"
-        settings:min="0"
-        settings:units="" />
+		<com.komodo.settings.preferences.SystemSettingSwitchPreference
+			android:key="network_traffic_state"
+			android:title="@string/network_traffic_state_title"
+			android:summary="@string/network_traffic_state_summary"
+			android:defaultValue="true" />
 
-     <com.komodo.settings.preferences.SystemSettingSwitchPreference
-        android:key="network_traffic_hidearrow"
-        android:title="@string/network_traffic_hidearrow"
-        android:summary="@string/network_traffic_hidearrow_summary"
-        android:dependency="network_traffic_state"
-        android:defaultValue="false" />
+		<com.komodo.settings.preferences.CustomSeekBarPreference
+			android:key="network_traffic_autohide_threshold"
+			android:title="@string/network_traffic_autohide_threshold_title"
+			android:max="10"
+			settings:min="0"
+			settings:units="" />
 
-    <Preference
-        android:key="carrier_label"
-        android:title="@string/status_carrier_title"
-        android:fragment="com.komodo.settings.fragments.CarrierLabel" />
+		 <com.komodo.settings.preferences.SystemSettingSwitchPreference
+			android:key="network_traffic_hidearrow"
+			android:title="@string/network_traffic_hidearrow"
+			android:summary="@string/network_traffic_hidearrow_summary"
+			android:dependency="network_traffic_state"
+			android:defaultValue="false" />
+
+    <PreferenceCategory
+        android:key="status_carrier"
+        android:title="@string/status_carrier_category_title"/>
+
+		<Preference
+			android:key="carrier_label"
+			android:title="@string/status_carrier_title"
+			android:fragment="com.komodo.settings.fragments.CarrierLabel" />
 
     <PreferenceCategory
         android:key="statusbar_gestures"
-        android:title="@string/gestures_title">
+        android:title="@string/gestures_title"/>
 
         <com.komodo.settings.preferences.SystemSettingSwitchPreference
             android:key="double_tap_sleep_gesture"
@@ -53,30 +61,30 @@
             android:summary="@string/double_tap_sleep_gesture_summary"
             android:defaultValue="false" />
 
-    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="battery_bar"
+        android:title="@string/battery_bar_category_title"/>
 
-    <Preference
-        android:key="batterybar_settings"
-        android:title="@string/battery_bar_title"
-        android:summary="@string/battery_bar_summary"
-        android:fragment="com.komodo.settings.fragments.BatterybarSettings" />
+		<Preference
+			android:key="batterybar_settings"
+			android:title="@string/battery_bar_title"
+			android:summary="@string/battery_bar_summary"
+			android:fragment="com.komodo.settings.fragments.BatterybarSettings" />
 
     <PreferenceCategory
          android:key="status_bar_logo"
-         android:title="@string/status_bar_logo_category_title">
+         android:title="@string/status_bar_logo_category_title"/>
 
-    <Preference
-            android:key="status_bar_logo"
-            android:title="@string/status_bar_logo_category_title"
-            android:summary="@string/status_bar_logo_category_summary"
-            android:fragment="com.komodo.settings.fragments.StatusBarLogo" />
+		<Preference
+				android:key="status_bar_logo"
+				android:title="@string/status_bar_logo_category_title"
+				android:summary="@string/status_bar_logo_category_summary"
+				android:fragment="com.komodo.settings.fragments.StatusBarLogo" />
 
-    <Preference
-         android:key="clock_settings"
-         android:title="@string/clock_style_category_title"
-         android:summary="@string/clock_style_category_summary"
-         android:fragment="com.komodo.settings.fragments.ClockSettings" />
-
-    </PreferenceCategory>
+		<Preference
+			 android:key="clock_settings"
+			 android:title="@string/clock_style_category_title"
+			 android:summary="@string/clock_style_category_summary"
+			 android:fragment="com.komodo.settings.fragments.ClockSettings" />
 
 </PreferenceScreen>

@@ -82,6 +82,7 @@
     <string name="navbar_tuner_title">Navbar buttons</string>
 
     <!-- Statusbar net monitor -->
+	<string name="network_traffic_category_title">Net Monitor</string>
     <string name="network_traffic_state_title">Network traffic</string>
     <string name="network_traffic_state_summary">Show net activity in statusbar</string>
     <string name="network_traffic_autohide_threshold_title">Net activity autohide threshold (KB/s)</string>
@@ -176,6 +177,7 @@
     <string name="double_tap_sleep_gesture_summary">Double tap on the status bar to put the device to sleep</string>
 
     <!-- Battery Bar -->
+    <string name="battery_bar_category_title">Battery</string>
     <string name="battery_bar_title">Battery Bar</string>
     <string name="battery_bar_summary">Decorate battery bar</string>
     <string name="battery_bar_location">Battery bar location</string>
@@ -312,6 +314,7 @@
     <string name="qs_set_animation_interpolator">%1$s</string>
 
     <!-- Carrier Label -->
+	<string name="status_carrier_category_title">Carrier</string>
     <string name="status_carrier_title">Carrier Label</string>
     <string name="carrier_options">Select display locations</string>
     <string name="custom_carrier_label_title">Custom carrier label</string>
