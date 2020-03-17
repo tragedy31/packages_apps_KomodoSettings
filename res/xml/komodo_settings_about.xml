@@ -53,7 +53,7 @@ limitations under the License.
 				android:icon="@drawable/ic_web" >
 				<intent
 					android:action="android.intent.action.VIEW"
-					android:data="https://kryptonproject.org" />
+					android:data="https://komodo-os.my.id" />
 			</Preference>
 
 			<Preference
@@ -128,7 +128,16 @@ limitations under the License.
 				android:icon="@drawable/ic_design">
 				<intent
 					android:action="android.intent.action.VIEW"
-					android:data="https://t.me/fakhrun39" />
+					android:data="https://t.me/Gnonymous7" />
+			</Preference>
+
+			<Preference
+				android:title="@string/dev_7"
+				android:summary="@string/designers"
+				android:icon="@drawable/ic_design">
+				<intent
+					android:action="android.intent.action.VIEW"
+					android:data="https://t.me/aryanata_andi" />
 			</Preference>
 
 		</PreferenceCategory>
