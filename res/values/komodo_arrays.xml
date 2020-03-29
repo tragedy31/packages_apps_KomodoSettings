@@ -120,23 +120,15 @@
     <string-array name="status_bar_logo_style_entries" translatable="false">
         <item>WolF</item>
         <item>Komodo</item>
-        <item>Cannabis</item>
         <item>GZR Skull</item>
         <item>GZR Circle</item>
-        <item>Batman</item>
-        <item>Deadpool</item>
-        <item>Superman</item>
-        <item>Ironman</item>
-        <item>Spiderman</item>
-        <item>Decpticons</item>
-        <item>Minions</item>
         <item>Android</item>
-        <item>Apple</item>
-        <item>iOS</item>
-        <item>Blackberry</item>
+        <item>Shit</item>
+        <item>Shitty Logo</item>
+        <item>BB</item>
         <item>Cake</item>
         <item>Blogger</item>
-        <item>Bio Hazard</item>
+        <item>Bio hazard</item>
         <item>Linux</item>
         <item>Yin Yang</item>
         <item>Windows</item>
@@ -151,7 +143,6 @@
         <item>Gender Male</item>
         <item>Gender Female</item>
         <item>Gender Male-Female</item>
-        <item>Guitar Electric</item>
     </string-array>
     <string-array name="status_bar_logo_style_values" translatable="false">
         <item>0</item>
@@ -179,15 +170,6 @@
         <item>22</item>
         <item>23</item>
         <item>24</item>
-        <item>25</item>
-        <item>26</item>
-        <item>27</item>
-        <item>28</item>
-        <item>29</item>
-        <item>30</item>
-        <item>31</item>
-        <item>32</item>
-        <item>33</item>
     </string-array>
 
     <!-- Statusbar Clock -->
