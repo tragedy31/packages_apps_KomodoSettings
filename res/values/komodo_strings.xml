@@ -82,13 +82,27 @@
     <!-- Navbar tuner -->
     <string name="navbar_tuner_title">Navbar buttons</string>
 
-    <!-- Statusbar net monitor -->
-	<string name="network_traffic_category_title">Net Monitor</string>
-    <string name="network_traffic_state_title">Network traffic</string>
-    <string name="network_traffic_state_summary">Show net activity in statusbar</string>
-    <string name="network_traffic_autohide_threshold_title">Net activity autohide threshold (KB/s)</string>
-    <string name="network_traffic_hidearrow">Hide arrows</string>
-    <string name="network_traffic_hidearrow_summary">Hide the network traffic indicator arrows</string>
+    <!-- Network Traffic -->
+    <string name="statusbar_trafficat">Network Traffic</string>
+    <string name="trafficat">Network Traffic Indicators</string>
+    <string name="trafficat_summary">Network speed indicator</string>
+    <string name="network_traffic_state_title">Location</string>
+    <string name="network_traffic_autohide_threshold_title">Auto-hide threshold</string>
+    <string name="network_traffic_hidearrow">Activity arrows</string>
+    <string name="network_traffic_hidearrow_summary">Show the network traffic indicator arrows</string>
+    <string name="network_traffic_type">Activity type</string>
+    <string name="network_traffic_layout">Activity layout</string>
+    <string name="network_traffic_layout_h">Horizontal</string>
+    <string name="network_traffic_layout_v">Verticle</string>
+    <string name="show_network_traffic_combined">Combined (Upload + Download)</string>
+    <string name="show_network_traffic_dynamic">Dynamic</string>
+    <string name="show_network_traffic_up">Upload</string>
+    <string name="show_network_traffic_down">Download</string>
+    <string name="show_network_traffic_all">Both</string>
+    <string name="traffic_disabled">Disabled</string>
+    <string name="traffic_statusbar">Statusbar</string>
+    <string name="traffic_expanded_statusbar">Expanded Statusbar</string>
+    <string name="network_traffic_refresh_interval_title">Refresh interval</string>
 
     <!-- Custom headers -->
     <string name="custom_header_pick_summary">Select an image from pre-installed image collections</string>
@@ -360,4 +374,8 @@
     <string name="blur_quicksettings_subtitle">blurs darkened background behind quick settings</string>
     <string name="qs_blur_alpha_title">Blur alpha</string>
     <string name="qs_blur_alpha_summary">Sets the blur transparency</string>
+
+    <!-- 4G icon -->
+    <string name="show_fourg_icon_title">4G icon</string>
+    <string name="show_fourg_icon_summary">Display 4G icon in signal icon instead LTE</string>
 </resources>
