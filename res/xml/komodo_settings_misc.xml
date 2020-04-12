@@ -24,4 +24,10 @@
         android:summary="@string/allow_signature_fake_summary"
         android:defaultValue="false" />
 
+        <!-- Enable/Disable Screenshot sound -->
+    <com.komodo.settings.preferences.SystemSettingSwitchPreference
+        android:key="screenshot_sound"
+        android:title="@string/screenshot_sound_title"
+        android:defaultValue="true" />
+
 </PreferenceScreen>
