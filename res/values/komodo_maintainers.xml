@@ -19,13 +19,15 @@ limitations under the License.
     <string-array name="maintainers_title" translatable="false">
         <item>Kry9toN</item>
         <item>Najahi</item>
-        <item>Zugeng</item>
+        <item>Alan</item>
 	<item>Harun</item>
 	<item>Chann</item>
 	<item>Hatsune</item>
         <item>Wulan</item>
 	<item>Zull</item>
 	<item>Ayush K</item>
+        <item>Rifky Mcz</item>
+        <item>Kevin x Aoihara</item>
 	</string-array>
 
     <!-- Devices maintained by maintainer -->
@@ -39,19 +41,23 @@ limitations under the License.
         <item>Xiaomi Redmi 6A (Cactus)</item>
 	<item>Asus Zenfone Pro M1 (X00T)</item>
 	<item>Xiaomi Redmi Note 5 (whyred)</item>
+        <item>Xiaomi Mi A1</item>
+        <item>Xiaomi Redmi 3S</item>
 	</string-array>
 
     <!-- Telegram URL of maintainer -->
     <string-array name="maintainers_url" translatable="false">
         <item>https://t.me/Kry9toN</item>
 	<item>https://t.me/najahiii</item>
-        <item>https://t.me/tukangcaribug</item>
+        <item>https://t.me/alanndz</item>
         <item>https://t.me/aarunalr</item>
 	<item>https://t.me/imchann</item>
 	<item>https://t.me/fekkku77</item>
         <item>https://t.me/wulan17</item>
 	<item>https://t.me/WeedMoonlight</item>
 	<item>https://t.me/Aayu58</item>
+        <item>https://t.me/rifky_mcz</item>
+        <item>https://t.me/Gabrielse</item>
 	</string-array>
 
 </resources>
