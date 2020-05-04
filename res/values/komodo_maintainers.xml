@@ -28,6 +28,7 @@ limitations under the License.
 	<item>Ayush K</item>
         <item>Rifky Mcz</item>
         <item>Kevin x Aoihara</item>
+        <item>HeinzDF</item>
 	</string-array>
 
     <!-- Devices maintained by maintainer -->
@@ -41,8 +42,9 @@ limitations under the License.
         <item>Xiaomi Redmi 6A (Cactus)</item>
 	<item>Asus Zenfone Pro M1 (X00T)</item>
 	<item>Xiaomi Redmi Note 5 (whyred)</item>
-        <item>Xiaomi Mi A1</item>
-        <item>Xiaomi Redmi 3S</item>
+        <item>Xiaomi Mi A1 (tissot)</item>
+        <item>Xiaomi Redmi 3S (land)</item>
+        <item>Xiaomi Redmi Note 5A (ugglite)</item>
 	</string-array>
 
     <!-- Telegram URL of maintainer -->
@@ -58,6 +60,7 @@ limitations under the License.
 	<item>https://t.me/Aayu58</item>
         <item>https://t.me/rifky_mcz</item>
         <item>https://t.me/Gabrielse</item>
+        <item>https://t.me/fortifying</item>
 	</string-array>
 
 </resources>
