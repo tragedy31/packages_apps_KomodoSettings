@@ -30,6 +30,7 @@ limitations under the License.
         <item>Kevin x Aoihara</item>
         <item>HeinzDF</item>
         <item>Jhek</item>
+	<item>Rafi</item>
 	</string-array>
 
     <!-- Devices maintained by maintainer -->
@@ -46,7 +47,8 @@ limitations under the License.
         <item>Xiaomi Mi A1 (tissot)</item>
         <item>Xiaomi Redmi 3S (land)</item>
         <item>Xiaomi Redmi Note 5A (ugglite)</item>
-        <item>Xiaimi Redmi 5 (rosy)</item>
+        <item>Xiaomi Redmi 5 (rosy)</item>
+	<item>Xiaomi Redmi Note 4X (mido)</item>
 	</string-array>
 
     <!-- Telegram URL of maintainer -->
@@ -64,6 +66,7 @@ limitations under the License.
         <item>https://t.me/Gabrielse</item>
         <item>https://t.me/fortifying</item>
         <item>https://t.me/Unclone</item>
+	<item>https://t.me/rafiester</item>
 	</string-array>
 
 </resources>
