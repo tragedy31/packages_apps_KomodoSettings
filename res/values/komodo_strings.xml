@@ -20,13 +20,12 @@
     <string name="komodo_dashboard_summary">Original from indonesia</string>
 	
     <!-- Categories -->
-    <string name="about_title">About Komodo and our Team</string>
+    <string name="about_title">About Komodo</string>
     <string name="animations_title">Animations</string>
     <string name="buttons_title">Buttons</string>
     <string name="gestures_title">Gestures</string>
     <string name="lockscreen_title">Lock Screen</string>
     <string name="misc_title">Miscellaneous</string>
-    <string name="navigation_title">Navigation Bar</string>
     <string name="notifications_title">Notifications</string>
     <string name="panels_title">Panels</string>
     <string name="quicksettings_title">Quick Settings</string>
@@ -80,6 +79,7 @@
     <string name="donate_description">Support Us</string>
 
     <!-- Navbar tuner -->
+    <string name="gs_nav_bar_category">Navbar</string>
     <string name="navbar_tuner_title">Navbar buttons</string>
 
     <!-- Network Traffic -->
