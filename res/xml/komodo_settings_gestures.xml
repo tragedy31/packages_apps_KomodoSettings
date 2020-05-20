@@ -24,4 +24,15 @@
         android:summary="@string/three_finger_gesture_summary"
         android:defaultValue="false" />
 
+    <PreferenceCategory
+        android:key="gs_nav_bar_category"
+        android:title="@string/gs_nav_bar_category">
+
+        <com.komodo.settings.preferences.SecureSettingSwitchPreference
+                android:key="sysui_nav_bar_inverse"
+                android:title="@string/navbar_invert_layout_title"
+                android:defaultValue="false" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
