@@ -32,14 +32,15 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
 public class About extends SettingsPreferenceFragment {
-	@Override
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		addPreferencesFromResource(R.xml.komodo_settings_about);
-		PreferenceCategory maintainers = (PreferenceCategory)findPreference("maintainers");
-		String[] maintainers_title = getResources().getStringArray(R.array.maintainers_title);
-        String[] maintainers_devices = getResources().getStringArray(R.array.maintainers_devices);
-        String[] maintainers_url = getResources().getStringArray(R.array.maintainers_url);
+            super.onCreate(savedInstanceState);
+            addPreferencesFromResource(R.xml.komodo_settings_about);
+            PreferenceCategory maintainers = (PreferenceCategory)findPreference("maintainers");
+            String[] maintainers_title = getResources().getStringArray(R.array.maintainers_title);
+            String[] maintainers_devices = getResources().getStringArray(R.array.maintainers_devices);
+            String[] maintainers_url = getResources().getStringArray(R.array.maintainers_url);
 		for (int i = 0; i < maintainers_title.length; i++) {
             Preference maintainer = new Preference(getPrefContext());
             final String maintainer_url = maintainers_url[i];
@@ -47,15 +48,16 @@ public class About extends SettingsPreferenceFragment {
             maintainer.setTitle(maintainers_title[i]);
             maintainer.setSummary(String.format(getString(R.string.maintainer_description), maintainers_devices[i]));
             maintainer.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
-					@Override
-					public boolean onPreferenceClick(Preference preference) {
-						getActivity().startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(maintainer_url)));
-						return true;
-					}
-				});
+
+     @Override
+     public boolean onPreferenceClick(Preference preference) {
+             getActivity().startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(maintainer_url)));
+             return true;
+           }
+     });
             maintainers.addPreference(maintainer);
         }
-    }
+     }
 
     @Override
     public int getMetricsCategory() {
