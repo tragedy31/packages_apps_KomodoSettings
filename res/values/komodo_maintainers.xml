@@ -19,51 +19,51 @@ limitations under the License.
     <string-array name="maintainers_title" translatable="false">
         <item>Kry9toN</item>
         <item>Najahi</item>
-        <item>Alan</item>
-	<item>Harun</item>
-	<item>Chann</item>
-	<item>Hatsune</item>
+        <item>Zugeng Owen</item>
+        <item>Harun</item>
+        <item>Chann</item>
+        <item>Hatsune</item>
         <item>Wulan</item>
-	<item>Zull</item>
+        <item>Zull</item>
         <item>Rifky Mcz</item>
         <item>Kevin x Aoihara</item>
         <item>HeinzDF</item>
         <item>Jhek</item>
-	<item>Rafi</item>
+        <item>Rafi</item>
 	</string-array>
 
     <!-- Devices maintained by maintainer -->
     <string-array name="maintainers_devices" translatable="false">
         <item>Xiaomi Redmi 5 Plus (vince)</item>
-	<item>Xiaomi Redmi Note 8 (Ginkgo)</item>
+        <item>Xiaomi Redmi Note 8 (Ginkgo)</item>
         <item>Xiaomi Redmi Note 7 (lavender)</item>
         <item>Pocophone F1 (Beryllium)</item>
-	<item>Xiaomi Redmi 5A (Riva)</item>
-	<item>Xiaomi Redmi S2 (YSL)</item>
+        <item>Xiaomi Redmi 5A (Riva)</item>
+        <item>Xiaomi Redmi S2 (YSL)</item>
         <item>Xiaomi Redmi 6A (Cactus)</item>
-	<item>Asus Zenfone Pro M1 (X00T)</item>
+        <item>Asus Zenfone Pro M1 (X00T)</item>
         <item>Xiaomi Mi A1 (tissot)</item>
         <item>Xiaomi Redmi 3S (land)</item>
         <item>Xiaomi Redmi Note 5A (ugglite)</item>
         <item>Xiaomi Redmi 5 (rosy)</item>
-	<item>Xiaomi Redmi Note 4X (mido)</item>
+        <item>Xiaomi Redmi Note 4X (mido)</item>
 	</string-array>
 
     <!-- Telegram URL of maintainer -->
     <string-array name="maintainers_url" translatable="false">
         <item>https://t.me/Kry9toN</item>
-	<item>https://t.me/najahiii</item>
+        <item>https://t.me/najahiii</item>
         <item>https://t.me/alanndz</item>
         <item>https://t.me/aarunalr</item>
-	<item>https://t.me/imchann</item>
-	<item>https://t.me/fekkku77</item>
+        <item>https://t.me/imchann</item>
+        <item>https://t.me/fekkku77</item>
         <item>https://t.me/wulan17</item>
-	<item>https://t.me/WeedMoonlight</item>
+        <item>https://t.me/WeedMoonlight</item>
         <item>https://t.me/rifky_mcz</item>
         <item>https://t.me/Gabrielse</item>
         <item>https://t.me/fortifying</item>
         <item>https://t.me/Unclone</item>
-	<item>https://t.me/rafiester</item>
+        <item>https://t.me/rafiester</item>
 	</string-array>
 
 </resources>
