@@ -30,6 +30,7 @@ limitations under the License.
         <item>HeinzDF</item>
         <item>Jhek</item>
         <item>Rafi</item>
+        <item>Fadlyas</item>
 	</string-array>
 
     <!-- Devices maintained by maintainer -->
@@ -47,13 +48,14 @@ limitations under the License.
         <item>Xiaomi Redmi Note 5A (ugglite)</item>
         <item>Xiaomi Redmi 5 (rosy)</item>
         <item>Xiaomi Redmi Note 4X (mido)</item>
+        <item>Xiaomi Redmi 4A (rolex)</item>
 	</string-array>
 
     <!-- Telegram URL of maintainer -->
     <string-array name="maintainers_url" translatable="false">
         <item>https://t.me/Kry9toN</item>
         <item>https://t.me/najahiii</item>
-        <item>https://t.me/alanndz</item>
+        <item>https://t.me/tukangcaribug</item>
         <item>https://t.me/aarunalr</item>
         <item>https://t.me/imchann</item>
         <item>https://t.me/fekkku77</item>
@@ -64,6 +66,7 @@ limitations under the License.
         <item>https://t.me/fortifying</item>
         <item>https://t.me/Unclone</item>
         <item>https://t.me/rafiester</item>
+        <item>https://t.me/fadlyas07</item>
 	</string-array>
 
 </resources>
