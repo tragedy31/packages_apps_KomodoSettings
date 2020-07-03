@@ -128,6 +128,15 @@
     <string name="status_bar_custom_header_summary">Use a custom image for QS header</string>
     <string name="status_bar_custom_header_title">Header image</string>
 
+    <!-- QS header styles -->
+    <string name="qs_header_style_title">QS Header style</string>
+    <string name="qs_header_default">Default (Black)</string>
+    <string name="qs_header_accent">Accent Based</string>
+    <string name="qs_header_transparent">Transparent</string>
+    <string name="qs_header_custom_color">Custom color</string>
+    <string name="qs_header_style_color_title">Header color</string>
+    <string name="qs_header_style_color_summary">Choose QS Header color</string>
+
     <!-- Theming -->
     <string name="gvm_category" translatable="false">GVM</string>
     <string name="gvm_title">G-visual mod</string>

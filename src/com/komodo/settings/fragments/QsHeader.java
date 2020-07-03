@@ -35,6 +35,8 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.komodo.settings.preferences.CustomSeekBarPreference;
 import com.komodo.settings.preferences.SystemSettingSwitchPreference;
 
+import net.margaritov.preference.colorpicker.ColorPickerPreference;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -49,6 +51,8 @@ public class QsHeader extends SettingsPreferenceFragment
     private static final String CUSTOM_HEADER_IMAGE_SHADOW = "status_bar_custom_header_shadow";
     private static final String CUSTOM_HEADER_PROVIDER = "custom_header_provider";
     private static final String FILE_HEADER_SELECT = "file_header_select";
+    private static final String QS_HEADER_STYLE = "qs_header_style";
+    private static final String QS_HEADER_STYLE_COLOR = "qs_header_style_color";
 
     private static final int REQUEST_PICK_IMAGE = 0;
 
@@ -59,11 +63,14 @@ public class QsHeader extends SettingsPreferenceFragment
     private String mDaylightHeaderProvider;
     private Preference mFileHeader;
     private String mFileHeaderProvider;
+    private ListPreference mQsHeaderStyle;
+    private ColorPickerPreference mQsHeaderStyleColor;
 
     @Override
     public void onResume() {
         super.onResume();
         updateEnablement();
+        updateQsHeaderStyleColor();
     }
 
     @Override
@@ -100,6 +107,8 @@ public class QsHeader extends SettingsPreferenceFragment
         mHeaderProvider.setOnPreferenceChangeListener(this);
 
         mFileHeader = findPreference(FILE_HEADER_SELECT);
+
+        getQsHeaderStylePref();
     }
 
     private void updateHeaderProviderSummary(boolean headerEnabled) {
@@ -146,8 +155,62 @@ public class QsHeader extends SettingsPreferenceFragment
             int valueIndex = mHeaderProvider.findIndexOfValue(value);
             mHeaderProvider.setSummary(mHeaderProvider.getEntries()[valueIndex]);
             updateEnablement();
+        } else if (preference == mQsHeaderStyle) {
+            String value = (String) newValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+			    Settings.System.QS_HEADER_STYLE, Integer.valueOf(value));
+            int newIndex = mQsHeaderStyle.findIndexOfValue(value);
+            mQsHeaderStyle.setSummary(mQsHeaderStyle.getEntries()[newIndex]);
+            updateQsHeaderStyleColor();
+            return true;
+        } else if (preference == mQsHeaderStyleColor) {
+                String hex = ColorPickerPreference.convertToARGB(
+                        Integer.valueOf(String.valueOf(newValue)));
+                preference.setSummary(hex);
+                int intHex = ColorPickerPreference.convertToColorInt(hex);
+                Settings.System.putInt(getActivity().getContentResolver(),
+                        Settings.System.QS_HEADER_STYLE_COLOR, intHex);
+            return true;
         }
         return true;
+    }
+
+    private void getQsHeaderStylePref() {
+        mQsHeaderStyle = (ListPreference) findPreference(QS_HEADER_STYLE);
+        int qsHeaderStyle = Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.QS_HEADER_STYLE, 0);
+        int valueIndex = mQsHeaderStyle.findIndexOfValue(String.valueOf(qsHeaderStyle));
+        mQsHeaderStyle.setValueIndex(valueIndex >= 0 ? valueIndex : 0);
+        mQsHeaderStyle.setSummary(mQsHeaderStyle.getEntry());
+        mQsHeaderStyle.setOnPreferenceChangeListener(this);
+        updateQsHeaderStyleColor();
+    }
+
+    private void updateQsHeaderStyleColor() {
+        int qsHeaderStyle = Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.QS_HEADER_STYLE, 0);
+
+        if(qsHeaderStyle == 3) {
+                mQsHeaderStyleColor = (ColorPickerPreference) findPreference(QS_HEADER_STYLE_COLOR);
+                int qsHeaderStyleColor = Settings.System.getInt(getContentResolver(),
+                        Settings.System.QS_HEADER_STYLE_COLOR, 0x0000000);
+                mQsHeaderStyleColor.setNewPreviewColor(qsHeaderStyleColor);
+                String qsHeaderStyleColorHex = String.format("#%08x", (0x0000000 & qsHeaderStyleColor));
+                mQsHeaderStyleColor.setSummary(qsHeaderStyleColorHex);
+                mQsHeaderStyleColor.setOnPreferenceChangeListener(this);
+                mQsHeaderStyleColor.setVisible(true);
+        } else {
+                mQsHeaderStyleColor = (ColorPickerPreference) findPreference(QS_HEADER_STYLE_COLOR);
+                if(mQsHeaderStyleColor != null) {
+                        mQsHeaderStyleColor.setVisible(false);
+                }
+        }
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        updateQsHeaderStyleColor();
     }
 
     private boolean isBrowseHeaderAvailable() {
