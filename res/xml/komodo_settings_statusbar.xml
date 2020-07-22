@@ -123,4 +123,17 @@
             android:summary="@string/volte_icon_summary"
             android:defaultValue="true"/>
 
+    <PreferenceCategory
+        android:key="brightness_category"
+        android:title="@string/brightness_category" />
+
+        <com.komodo.settings.preferences.SystemSettingListPreference
+            android:key="qs_show_brightness_slider"
+            android:title="@string/status_bar_brightness_slider_title"
+            android:summary="%s"
+            android:dialogTitle="@string/status_bar_brightness_slider_title"
+            android:entries="@array/status_bar_brightness_slider_entries"
+            android:entryValues="@array/status_bar_brightness_slider_values"
+            android:defaultValue="1" />
+
 </PreferenceScreen>
