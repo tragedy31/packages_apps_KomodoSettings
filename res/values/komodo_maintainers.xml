@@ -31,6 +31,7 @@ limitations under the License.
         <item>Jhek</item>
         <item>Rafi</item>
         <item>Fadlyas</item>
+        <item>ZHANtech</item>
 	</string-array>
 
     <!-- Devices maintained by maintainer -->
@@ -49,6 +50,7 @@ limitations under the License.
         <item>Xiaomi Redmi 5 (rosy)</item>
         <item>Xiaomi Redmi Note 4X (mido)</item>
         <item>Xiaomi Redmi 4A (rolex)</item>
+        <item>Xiaomi Redmi 4X (santoni)</item>
 	</string-array>
 
     <!-- Telegram URL of maintainer -->
@@ -67,6 +69,7 @@ limitations under the License.
         <item>https://t.me/Unclone</item>
         <item>https://t.me/Tuwaissuuu</item>
         <item>https://t.me/fadlyas07</item>
+        <item>https://t.me/zhantech</item>
 	</string-array>
 
 </resources>
