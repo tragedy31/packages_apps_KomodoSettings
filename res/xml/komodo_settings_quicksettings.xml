@@ -41,13 +41,18 @@
             android:title="@string/footer_text_string_title"
             android:summary="@string/footer_text_string_summary"
             android:dependency="footer_text_show" />
-    
+
         <com.komodo.settings.preferences.SystemSettingSwitchPreference
             android:key="qs_running_services_toggle"
             android:title="@string/qs_running_services_title"
             android:summary="@string/qs_running_services_summary"
             android:defaultValue="true" />
 
+        <com.komodo.settings.preferences.SystemSettingSwitchPreference 
+            android:key="qs_datausage"
+            android:title="@string/qs_datausage_title"
+            android:summary="@string/qs_datausage_subtitle"
+            android:defaultValue="false" />
     </PreferenceCategory>
 
     <com.komodo.settings.preferences.SystemSettingMasterSwitchPreference
