@@ -114,16 +114,4 @@
             android:summary="@string/volte_icon_summary"
             android:defaultValue="true"/>
 
-    <PreferenceCategory
-        android:key="statusbar_gestures"
-        android:title="@string/gestures_title">
-
-        <com.komodo.settings.preferences.SystemSettingSwitchPreference
-            android:key="double_tap_sleep_gesture"
-            android:title="@string/double_tap_sleep_gesture_title"
-            android:summary="@string/double_tap_sleep_gesture_summary"
-            android:defaultValue="false" />
-
-    </PreferenceCategory>
-
 </PreferenceScreen>

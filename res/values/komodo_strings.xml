@@ -505,9 +505,4 @@
     <string name="qs_datausage_daily">Daily usage</string>
     <string name="qs_datausage_monthly">Monthly usage</string>
 
-    <!-- Double Tap Lockscreen & Statusbar to Sleep -->
-    <string name="double_tap_to_sleep_lockscreen_title">Double-tap on lockscreen to sleep</string>
-    <string name="double_tap_to_sleep_lockscreen_summary">Double tap on the top third or bottom shortcut area of the lock screen to put the device to sleep</string>
-    <string name="double_tap_sleep_gesture_title">Double tap to sleep</string>
-    <string name="double_tap_sleep_gesture_summary">Double tap on the status bar to put the device to sleep</string>
 </resources>
