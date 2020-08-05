@@ -71,9 +71,9 @@
         android:title="@string/status_carrier_category_title"/>
 
 		<Preference
-			android:key="carrier_label"
-			android:title="@string/status_carrier_title"
-			android:fragment="com.komodo.settings.fragments.CarrierLabel" />
+                    android:key="carrier_label"
+                    android:title="@string/status_carrier_title"
+                    android:fragment="com.komodo.settings.fragments.CarrierLabel" />
 
 
     <PreferenceCategory
@@ -81,26 +81,26 @@
         android:title="@string/battery_bar_category_title"/>
 
 		<Preference
-			android:key="batterybar_settings"
-			android:title="@string/battery_bar_title"
-			android:summary="@string/battery_bar_summary"
-			android:fragment="com.komodo.settings.fragments.BatterybarSettings" />
+                    android:key="batterybar_settings"
+                    android:title="@string/battery_bar_title"
+                    android:summary="@string/battery_bar_summary"
+                    android:fragment="com.komodo.settings.fragments.BatterybarSettings" />
 
     <PreferenceCategory
          android:key="status_bar_logo"
          android:title="@string/status_bar_logo_category_title"/>
 
 		<Preference
-				android:key="status_bar_logo"
-				android:title="@string/status_bar_logo_category_title"
-				android:summary="@string/status_bar_logo_category_summary"
-				android:fragment="com.komodo.settings.fragments.StatusBarLogo" />
+                    android:key="status_bar_logo"
+                    android:title="@string/status_bar_logo_category_title"
+                    android:summary="@string/status_bar_logo_category_summary"
+                    android:fragment="com.komodo.settings.fragments.StatusBarLogo" />
 
 		<Preference
-			 android:key="clock_settings"
-			 android:title="@string/clock_style_category_title"
-			 android:summary="@string/clock_style_category_summary"
-			 android:fragment="com.komodo.settings.fragments.ClockSettings" />
+                    android:key="clock_settings"
+                    android:title="@string/clock_style_category_title"
+                    android:summary="@string/clock_style_category_summary"
+                    android:fragment="com.komodo.settings.fragments.ClockSettings" />
 
         <com.komodo.settings.preferences.SystemSettingSwitchPreference
             android:key="show_fourg_icon"
