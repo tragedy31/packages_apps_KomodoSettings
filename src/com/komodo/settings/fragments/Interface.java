@@ -23,8 +23,11 @@ import androidx.fragment.app.FragmentManager;
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settings.dashboard.DashboardFragment;
 import com.android.settings.display.OverlayCategoryPreferenceController;
+import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settings.search.Indexable;
 import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.settingslib.core.lifecycle.Lifecycle;
+import com.android.settingslib.search.SearchIndexable;
 
 import com.android.settings.R;
 
@@ -50,9 +53,15 @@ public class Interface extends DashboardFragment {
     }
 
     @Override
+    public void onCreate(Bundle icicle) {
+        super.onCreate(icicle);
+    }
+
+    @Override
     protected List<AbstractPreferenceController> createPreferenceControllers(Context context) {
         return buildPreferenceControllers(context, getSettingsLifecycle(), this);
     }
+
     private static List<AbstractPreferenceController> buildPreferenceControllers(
             Context context, Lifecycle lifecycle, Fragment fragment) {
         final List<AbstractPreferenceController> controllers = new ArrayList<>();
@@ -66,4 +75,24 @@ public class Interface extends DashboardFragment {
                 "android.theme.customization.ui_radius_vol"));
         return controllers;
     }
+
+    public static final Indexable.SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new BaseSearchIndexProvider() {
+                @Override
+                public List<SearchIndexableResource> getXmlResourcesToIndex(Context context,
+                        boolean enabled) {
+                    final ArrayList<SearchIndexableResource> result = new ArrayList<>();
+
+                    final SearchIndexableResource sir = new SearchIndexableResource(context);
+                    sir.xmlResId = R.xml.komodo_settings_interface;
+                    result.add(sir);
+                    return result;
+                }
+
+                @Override
+                public List<AbstractPreferenceController> createPreferenceControllers(
+                        Context context) {
+                    return buildPreferenceControllers(context, null);
+                }
+            };
 }
