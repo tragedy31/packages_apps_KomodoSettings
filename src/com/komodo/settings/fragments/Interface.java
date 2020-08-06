@@ -26,6 +26,8 @@ import android.provider.Settings;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.preference.PreferenceScreen;
+import androidx.preference.Preference;
 
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settings.dashboard.DashboardFragment;
@@ -41,18 +43,16 @@ import com.android.settings.R;
 import java.util.ArrayList;
 import java.util.List;
 
-@SearchIndexable
 public class Interface extends DashboardFragment
-        implements Preference.OnPreferenceChangeListener, Indexable {
+        implements Indexable {
 
     public static final String TAG = "Interface";
 
     private static final String PREF_KEY_CUTOUT = "cutout_settings";
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.komodo_settings_interface);
+    public void onCreate(Bundle icicle) {
+        super.onCreate(icicle);
 
         PreferenceScreen prefScreen = getPreferenceScreen();
 
@@ -83,11 +83,11 @@ public class Interface extends DashboardFragment
 
     @Override
     protected List<AbstractPreferenceController> createPreferenceControllers(Context context) {
-        return buildPreferenceControllers(context, getSettingsLifecycle(), this);
+        return buildPreferenceControllers(context, getSettingsLifecycle());
     }
 
     private static List<AbstractPreferenceController> buildPreferenceControllers(
-            Context context, Lifecycle lifecycle, Fragment fragment) {
+            Context context, Lifecycle lifecycle) {
         final List<AbstractPreferenceController> controllers = new ArrayList<>();
         controllers.add(new OverlayCategoryPreferenceController(context,
                 "android.theme.customization.pill_gesture"));
