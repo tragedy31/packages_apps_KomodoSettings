@@ -122,14 +122,6 @@
             android:defaultValue="4"
             android:persistent="false" />
 
-        <com.komodo.settings.preferences.CustomSeekBarPreference
-            android:key="qs_columns_quickbar"
-            android:title="@string/sysui_qqs_count_title"
-            android:max="8"
-            settings:min="6"
-            android:defaultValue="6"
-            android:persistent="false" />
-
      <PreferenceCategory
         android:key="qs_rows_category"
         android:title="@string/qs_rows_category" />
