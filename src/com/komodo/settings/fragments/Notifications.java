@@ -76,7 +76,7 @@ public class Notifications extends SettingsPreferenceFragment
 		            HEADS_UP_NOTIFICATIONS_ENABLED, value ? 1 : 0);
             return true;
         } else if (preference == mEdgePulse) {
-            boolean value = (Boolean) objValue;
+            boolean value = (Boolean) newValue;
             Settings.System.putInt(getContentResolver(),
 			    PULSE_AMBIENT_LIGHT, value ? 1 : 0);
 	    return true;
