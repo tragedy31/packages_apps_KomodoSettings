@@ -75,6 +75,11 @@ public class CutoutFragment extends SettingsPreferenceFragment
         }
     }
 
+    private static boolean hasPhysicalDisplayCutout(Context context) {
+        return context.getResources().getBoolean(
+                com.android.internal.R.bool.config_physicalDisplayCutout);
+    }
+
     @Override
     public void onResume() {
         super.onResume();
