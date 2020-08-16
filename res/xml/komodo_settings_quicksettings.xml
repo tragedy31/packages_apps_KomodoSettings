@@ -120,24 +120,6 @@
         android:key="qs_rows_category"
         android:title="@string/qs_rows_category" />
 
-        <com.komodo.settings.preferences.CustomSeekBarPreference
-            android:key="qs_rows_portrait"
-            android:title="@string/qs_rows_portrait_title"
-            android:max="4"
-            settings:min="1"
-            settings:units=""
-            android:defaultValue="3"
-            android:persistent="false" />
-
-        <com.komodo.settings.preferences.CustomSeekBarPreference
-            android:key="qs_rows_landscape"
-            android:title="@string/qs_rows_landscape_title"
-            android:max="2"
-            settings:min="1"
-            settings:units=""
-            android:defaultValue="2"
-            android:persistent="false" />
-
      <PreferenceCategory
         android:key="qs_blur_category"
         android:title="@string/qs_blur_category" />
