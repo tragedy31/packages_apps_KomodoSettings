@@ -343,9 +343,6 @@
     <string name="volume_rocker_wake_summary">Press volume keys to wake your device</string>
 
     <!-- Quick settings tiles columns and rows config -->
-    <string name="qs_columns_category">QS Columns</string>
-    <string name="qs_columns_portrait_title">Columns (Portrait)</string>
-    <string name="qs_columns_landscape_title">Columns (Landscape)</string>
     <string name="qs_tile_title_visibility_title">Tile title</string>
     <string name="qs_tile_title_visibility_summary">Display title below each tile</string>
     <string name="qs_footer">If there are no changes, please restart the SYSTEM UI</string>
