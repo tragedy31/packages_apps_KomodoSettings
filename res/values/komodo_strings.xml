@@ -61,19 +61,19 @@
     <string name="web">Download Center</string>
     <string name="web_description">Visit our download portal</string>
     <string name="maintainers">Maintainers</string>
-    <string name="dev_1">Dhimas Bagus Prayoga</string>
+    <string name="dev_1" translatable="false">Dhimas Bagus Prayoga</string>
     <string name="dev1_description">Founder, Device maintainer</string>
-    <string name="dev_2">Harun Al Rasyid</string>
+    <string name="dev_2" translatable="false">Harun Al Rasyid</string>
     <string name="dev2_description">Core Dev, Device maintainer</string>
-    <string name="dev_3">M. Gerald Febrinzaghi</string>
+    <string name="dev_3" translatable="false">M. Gerald Febrinzaghi</string>
     <string name="designers">Designer</string>
-    <string name="dev_4">Ahmad Thoriq Najahi</string>
+    <string name="dev_4" translatable="false">Ahmad Thoriq Najahi</string>
     <string name="dev4_description">Core Dev, Device maintainer</string>
-    <string name="dev_5">Trisf</string>
+    <string name="dev_5" translatable="false">Trisf</string>
     <string name="dev5_description">Website creator</string>
-    <string name="dev_6">alanndz</string>
+    <string name="dev_6" translatable="false">alanndz</string>
     <string name="dev6_description">Founder</string>
-    <string name="dev_7">Aryanata</string>
+    <string name="dev_7" translatable="false">Aryanata</string>
     <string name="maintainer_description">Maintains for %1$s</string>
     <string name="donate">Donate</string>
     <string name="donate_description">Support Us</string>
@@ -181,8 +181,6 @@
     <string name="hardware_keys_double_tap_title">Double tap action</string>
     <string name="hardware_keys_category">Hardware keys</string>
     <string name="hardware_keys_disable_title">Disable keys</string>
-    <string name="qs_brightness_position_bottom_title">Brightness slider at bottom</string>
-    <string name="qs_brightness_position_bottom_summary">Show a brightness slider on bottom quick settings</string>
 
     <!-- Navbar Invert -->
     <string name="navbar_invert_layout_title">Invert layout</string>
@@ -354,7 +352,6 @@
     <string name="qs_columns_category">QS Columns</string>
     <string name="qs_columns_portrait_title">Columns (Portrait)</string>
     <string name="qs_columns_landscape_title">Columns (Landscape)</string>
-    <string name="sysui_qqs_count_title">Columns (Quickbar)</string>
     <string name="qs_tile_title_visibility_title">Tile title</string>
     <string name="qs_tile_title_visibility_summary">Display title below each tile</string>
     <string name="qs_rows_category">QS Rows</string>
@@ -498,6 +495,134 @@
     <!-- QS category -->
     <string name="enable_clear_all_button">Replace clear all text with nice button</string>
     <string name="enable_clear_all_button_summary">Show clear all notifications button in quick settings instead of default text one</string>
+
+    <!-- QS Header data usage -->
+    <string name="qs_datausage_title">Data usage in QS Header</string>
+    <string name="qs_datausage_disabled">Disabled</string>
+    <string name="qs_datausage_daily">Daily usage</string>
+    <string name="qs_datausage_monthly">Monthly usage</string>
+
+    <!-- Brightness slider -->
+    <string name="brightness_category">Brightness</string>
+    <string name="status_bar_brightness_slider_title">Statusbar brightness slider</string>
+    <string name="status_bar_brightness_slider_show_never">Never show</string>
+    <string name="status_bar_brightness_slider_show_expanded">Show when expanded</string>
+    <string name="status_bar_brightness_slider_show_always">Show always</string>
+
+    <!-- Quick settings brightness slider -->
+    <string name="qs_brightness_category">Brightness</string>
+    <string name="qs_brightness_slider_title">Brightness slider position</string>
+    <string name="qs_brightness_slider_hide">Hidden</string>
+    <string name="qs_brightness_slider_top">Top</string>
+    <string name="qs_brightness_slider_bottom">Bottom</string>
+    <string name="qs_brightness_slider_always_top">Quick Qs (top)</string>
+    <string name="qs_brightness_slider_always_bottom">Quick Qs (bottom)</string>
+
+    <!-- Quick settings brightness icon -->
+    <string name="brightness_icon_title">Auto brightness icon</string>
+    <string name="brightness_icon_summary">Show toggle for adaptive brightness near the slider</string>
+
+    <!--  Volume Panel Plugin   -->
+    <string name="volume_bar_category">Volume bar</string>
+    <string name="volume_panel">Volume Panel Style</string>
+    <string name="volume_panel_aosp">AOSP</string>
+    <string name="volume_panel_compat">Compat</string>
+    <string name="volume_panel_oreo">Oreo</string>
+    <string name="volume_panel_tiled">Tiled</string>
+    <!--  Volume Panel Plugin Values   -->
+    <string name="volume_panel_aosp_val">co.potatoproject.plugin.volume.aosp</string>
+    <string name="volume_panel_compat_val">co.potatoproject.plugin.volume.compact</string>
+    <string name="volume_panel_oreo_val">co.potatoproject.plugin.volume.oreo</string>
+    <string name="volume_panel_tiled_val">co.potatoproject.plugin.volume.tiled</string>
+
+    <!-- Display cutout options -->
+    <string name="display_cutout_style_title">Cutout style</string>
+    <string name="display_cutout_style_normal">Normal</string>
+    <string name="display_cutout_style_immerse">Immerse</string>
+    <string name="display_cutout_style_hide">Hide</string>
+    <string name="stock_statusbar_in_hide">Stock statusbar height</string>
+    <string name="stock_statusbar_in_hide_summary">Use default statusbar height in Hide</string>
+    <string name="cutout_main">Display cutout settings</string>
+    <string name="cutout_main_summary">They really cut corners with this one</string>
+
+    <!-- Lockscreen fonts - Common strings -->
+    <string name="lock_fonts_system_headline">System headline (default)</string>
+    <string name="lock_fonts_system_body">System body</string>
+    <string name="lock_fonts_stock">Normal</string>
+    <string name="lock_fonts_bold">Bold</string>
+    <string name="lock_fonts_italic">Italic</string>
+    <string name="lock_fonts_bold_italic">Bold Italic</string>
+    <string name="lock_fonts_light_italic">Light Italic</string>
+    <string name="lock_fonts_light">Light</string>
+    <string name="lock_fonts_condensed_normal">Condensed</string>
+    <string name="lock_fonts_condensed_italic">Condensed Italic</string>
+    <string name="lock_fonts_condensed_bold">Condensed Bold</string>
+    <string name="lock_fonts_condensed_bold_italic">Condensed Bold Italic</string>
+    <string name="lock_fonts_medium_normal">Medium</string>
+    <string name="lock_fonts_medium_italic">Medium Italic</string>
+
+    <!-- Lock Clock Fonts -->
+    <string name="lock_clock_font_title">Clock font options</string>
+    <string name="lock_clock_font_summary">Change the default font of the lockscreen clock widget</string>
+    <string name="lock_clock_font_dialog_title">Select lock clock font</string>
+
+    <!-- Lock date fonts -->
+    <string name="lock_date_font_title">Date font options</string>
+    <string name="lock_date_font_summary">Change the default font of the lockscreen date widget</string>
+    <string name="lock_date_font_dialog_title">Select lock date font</string>
+
+    <!-- Lockscreen fonts - other fonts, untranslatable by default -->
+    <!-- Custom fonts -->
+    <string name="lock_clock_font_abelreg" translatable="false">Abel</string>
+    <string name="lock_clock_font_adamcg" translatable="false">Adan CG Pro</string>
+    <string name="lock_clock_font_adventpro" translatable="false">Advent Pro</string>
+    <string name="lock_clock_font_alexananeue" translatable="false">Alexana Neue</string>
+    <string name="lock_clock_font_alienleague" translatable="false">Alien League</string>
+    <string name="lock_clock_font_archivo" translatable="false">Archivo Narrow</string>
+    <string name="lock_clock_font_autour" translatable="false">Autour One</string>
+    <string name="lock_clock_font_azedo" translatable="false">Azedo Light</string>
+    <string name="lock_clock_font_badscript" translatable="false">Bad Script</string>
+    <string name="lock_clock_font_bignoodleital" translatable="false">Big Noodle Tilting Italic</string>
+    <string name="lock_clock_font_bignoodle" translatable="false">Big Noodle Tilting</string>
+    <string name="lock_clock_font_biko" translatable="false">Biko</string>
+    <string name="lock_clock_font_blern" translatable="false">Blern</string>
+    <string name="lock_clock_font_cherryswash" translatable="false">Cherry Swash</string>
+    <string name="lock_clock_font_cocobiker" translatable="false">CoCoBiker</string>
+    <string name="lock_clock_font_codystar" translatable="false">Codystar</string>
+    <string name="lock_clock_font_fester" translatable="false">Fester</string>
+    <string name="lock_clock_font_ginorasans" translatable="false">Ginora Sans</string>
+    <string name="lock_clock_font_gobold" translatable="false">GoBold Light</string>
+    <string name="lock_clock_font_googlesans" translatable="false">Google Sans</string>
+    <string name="lock_clock_font_ibmplex" translatable="false">IBMPlex Mono</string>
+    <string name="lock_clock_font_inkferno" translatable="false">Inkferno</string>
+    <string name="lock_clock_font_instruction" translatable="false">Instruction</string>
+    <string name="lock_clock_font_jacklane" translatable="false">Jack Lane</string>
+    <string name="lock_clock_font_jura" translatable="false">Jura</string>
+    <string name="lock_clock_font_kellyslab" translatable="false">Kelly Slab</string>
+    <string name="lock_clock_font_metro1920" translatable="false">Metropolis 1920</string>
+    <string name="lock_clock_font_monad" translatable="false">Monad</string>
+    <string name="lock_clock_font_neonneon" translatable="false">Neonneon</string>
+    <string name="lock_clock_font_noir" translatable="false">Noir</string>
+    <string name="lock_clock_font_north" translatable="false">North</string>
+    <string name="lock_clock_font_outrunfuture" translatable="false">Outrun Future</string>
+    <string name="lock_clock_font_pompiere" translatable="false">Pompiere</string>
+    <string name="lock_clock_font_qontra" translatable="false">Qontra</string>
+    <string name="lock_clock_font_reemkufi" translatable="false">Reem Kufi</string>
+    <string name="lock_clock_font_riviera" translatable="false">Riviera</string>
+    <string name="lock_clock_font_roadrage" translatable="false">Road Rage</string>
+    <string name="lock_clock_font_seaweedsc" translatable="false">Seaweed Script</string>
+    <string name="lock_clock_font_sedgwick" translatable="false">Sedgwick Ave Display</string>
+    <string name="lock_clock_font_snowstorm" translatable="false">Snowstorm</string>
+    <string name="lock_clock_font_theoutbox" translatable="false">The Outbox</string>
+    <string name="lock_clock_font_union" translatable="false">Union</string>
+    <string name="lock_clock_font_vibur" translatable="false">Vibur</string>
+    <string name="lock_clock_font_voltaire" translatable="false">Voltaire</string>
+    <string name="lock_clock_font_themeable">Themeable (or VCR OSD Mono)</string>
+    <string name="lock_dateown_font_themeable">Themeable (or Fox and Cat)</string>
+
+    <!-- Notch: Full screen apps -->
+    <string name="display_cutout_force_fullscreen_title">Full screen apps</string>
+    <string name="display_cutout_force_fullscreen_summary">Force apps to ignore notch space</string>
 
     <!-- Double Tap Lockscreen & Statusbar to Sleep -->
     <string name="double_tap_to_sleep_lockscreen_title">Double-tap on lockscreen to sleep</string>

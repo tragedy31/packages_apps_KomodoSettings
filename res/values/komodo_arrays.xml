@@ -427,4 +427,194 @@
         <item>1200000</item>
     </string-array>
 
+    <!-- QS Header data uasge -->
+    <string-array name="qs_datausage_entries" translatable="false">
+        <item>@string/qs_datausage_disabled</item>
+        <item>@string/qs_datausage_daily</item>
+        <item>@string/qs_datausage_monthly</item>
+    </string-array>
+    <string-array name="qs_datausage_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <!-- Statusbar brightness -->
+    <string-array name="status_bar_brightness_slider_entries" translatable="false">
+        <item>@string/status_bar_brightness_slider_show_never</item>
+        <item>@string/status_bar_brightness_slider_show_expanded</item>
+        <item>@string/status_bar_brightness_slider_show_always</item>
+    </string-array>
+
+    <string-array name="status_bar_brightness_slider_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <!-- QS Brightness Slider position --> 
+    <string-array name="qs_brightness_slider_entries" translatable="false"> 
+        <item>@string/qs_brightness_slider_hide</item> 
+        <item>@string/qs_brightness_slider_top</item> 
+        <item>@string/qs_brightness_slider_bottom</item> 
+        <item>@string/qs_brightness_slider_always_top</item>
+        <item>@string/qs_brightness_slider_always_bottom</item>
+    </string-array> 
+
+    <string-array name="qs_brightness_slider_values" translatable="false"> 
+        <item>0</item> 
+        <item>1</item> 
+        <item>2</item> 
+        <item>3</item>
+        <item>4</item>
+    </string-array>	
+
+    <!--  Volume Panel  -->
+    <string-array name="volume_panel_entries">
+        <item>@string/volume_panel_aosp</item>
+        <item>@string/volume_panel_compat</item>
+        <item>@string/volume_panel_oreo</item>
+        <item>@string/volume_panel_tiled</item>
+    </string-array>
+
+    <string-array name="volume_panel_values" translatable="false">
+        <item>@string/volume_panel_aosp_val</item>
+        <item>@string/volume_panel_compat_val</item>
+        <item>@string/volume_panel_oreo_val</item>
+        <item>@string/volume_panel_tiled_val</item>
+    </string-array>
+
+    <!-- Display cutout options -->
+    <string-array name="display_cutout_style_entries" translatable="false">
+        <item>@string/display_cutout_style_normal</item>
+        <item>@string/display_cutout_style_immerse</item>
+        <item>@string/display_cutout_style_hide</item>
+    </string-array>
+
+    <string-array name="display_cutout_style_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <!-- Lock Clock Fonts -->
+    <string-array name="lock_clock_fonts_entries">
+        <item>@string/lock_fonts_system_headline</item>
+        <item>@string/lock_fonts_system_body</item>
+        <item>@string/lock_fonts_stock</item>
+        <item>@string/lock_fonts_bold</item>
+        <item>@string/lock_fonts_italic</item>
+        <item>@string/lock_fonts_bold_italic</item>
+        <item>@string/lock_fonts_light</item>
+        <item>@string/lock_fonts_light_italic</item>
+        <item>@string/lock_fonts_condensed_normal</item>
+        <item>@string/lock_fonts_condensed_italic</item>
+        <item>@string/lock_fonts_condensed_bold</item>
+        <item>@string/lock_fonts_condensed_bold_italic</item>
+        <item>@string/lock_fonts_medium_normal</item>
+        <item>@string/lock_fonts_medium_italic</item>
+    </string-array>
+    <string-array name="lock_clock_fonts_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+    </string-array>
+
+    <!-- Lock Date Fonts -->
+    <string-array name="lock_date_fonts_entries">
+        <item>@string/lock_fonts_system_headline</item>
+        <item>@string/lock_fonts_system_body</item>
+        <item>@string/lock_fonts_stock</item>
+        <item>@string/lock_fonts_bold</item>
+        <item>@string/lock_fonts_italic</item>
+        <item>@string/lock_fonts_bold_italic</item>
+        <item>@string/lock_fonts_light</item>
+        <item>@string/lock_fonts_light_italic</item>
+        <item>@string/lock_fonts_condensed_normal</item>
+        <item>@string/lock_fonts_condensed_italic</item>
+        <item>@string/lock_fonts_condensed_bold</item>
+        <item>@string/lock_fonts_condensed_bold_italic</item>
+        <item>@string/lock_fonts_medium_normal</item>
+        <item>@string/lock_fonts_medium_italic</item>
+        <item>@string/lock_clock_font_abelreg</item>
+        <item>@string/lock_clock_font_adventpro</item>
+        <item>@string/lock_clock_font_alienleague</item>
+        <item>@string/lock_clock_font_bignoodleital</item>
+        <item>@string/lock_clock_font_biko</item>
+        <item>@string/lock_clock_font_blern</item>
+        <item>@string/lock_clock_font_cherryswash</item>
+        <item>@string/lock_clock_font_codystar</item>
+        <item>@string/lock_clock_font_ginorasans</item>
+        <item>@string/lock_clock_font_gobold</item>
+        <item>@string/lock_clock_font_googlesans</item>
+        <item>@string/lock_clock_font_inkferno</item>
+        <item>@string/lock_clock_font_jura</item>
+        <item>@string/lock_clock_font_kellyslab</item>
+        <item>@string/lock_clock_font_metro1920</item>
+        <item>@string/lock_clock_font_neonneon</item>
+        <item>@string/lock_clock_font_pompiere</item>
+        <item>@string/lock_clock_font_reemkufi</item>
+        <item>@string/lock_clock_font_riviera</item>
+        <item>@string/lock_clock_font_roadrage</item>
+        <item>@string/lock_clock_font_sedgwick</item>
+        <item>@string/lock_clock_font_snowstorm</item>
+        <item>@string/lock_clock_font_themeable</item>
+        <item>@string/lock_clock_font_union</item>
+        <item>@string/lock_clock_font_vibur</item>
+        <item>@string/lock_clock_font_voltaire</item>
+    </string-array>
+     <string-array name="lock_date_fonts_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+    </string-array>
+
 </resources>
