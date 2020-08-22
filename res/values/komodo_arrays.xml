@@ -547,32 +547,37 @@
         <item>@string/lock_fonts_condensed_bold_italic</item>
         <item>@string/lock_fonts_medium_normal</item>
         <item>@string/lock_fonts_medium_italic</item>
-        <item>@string/lock_clock_font_abelreg</item>
-        <item>@string/lock_clock_font_adventpro</item>
-        <item>@string/lock_clock_font_alienleague</item>
-        <item>@string/lock_clock_font_bignoodleital</item>
-        <item>@string/lock_clock_font_biko</item>
-        <item>@string/lock_clock_font_blern</item>
-        <item>@string/lock_clock_font_cherryswash</item>
-        <item>@string/lock_clock_font_codystar</item>
-        <item>@string/lock_clock_font_ginorasans</item>
-        <item>@string/lock_clock_font_gobold</item>
+        <item>@string/lock_clock_font_accuratist</item>
+        <item>@string/lock_clock_font_aclonica</item>
+        <item>@string/lock_clock_font_amarante</item>
+        <item>@string/lock_clock_font_bariol</item>
+        <item>@string/lock_clock_font_cagliostro</item>
+        <item>@string/lock_clock_font_cocon</item>
+        <item>@string/lock_clock_font_comfortaa</item>
+        <item>@string/lock_clock_font_comicsans</item>
+        <item>@string/lock_clock_font_coolstory</item>
+        <item>@string/lock_clock_font_exotwo</item>
+        <item>@string/lock_clock_font_fifa2018</item>
         <item>@string/lock_clock_font_googlesans</item>
-        <item>@string/lock_clock_font_inkferno</item>
-        <item>@string/lock_clock_font_jura</item>
-        <item>@string/lock_clock_font_kellyslab</item>
-        <item>@string/lock_clock_font_metro1920</item>
-        <item>@string/lock_clock_font_neonneon</item>
-        <item>@string/lock_clock_font_pompiere</item>
+        <item>@string/lock_clock_font_grandhotel</item>
+        <item>@string/lock_clock_font_lato</item>
+        <item>@string/lock_clock_font_lgsmartgothic</item>
+        <item>@string/lock_clock_font_linotte</item>
+        <item>@string/lock_clock_font_nokiapure</item>
+        <item>@string/lock_clock_font_nunito</item>
+        <item>@string/lock_clock_font_quando</item>
+        <item>@string/lock_clock_font_redressed</item>
         <item>@string/lock_clock_font_reemkufi</item>
-        <item>@string/lock_clock_font_riviera</item>
-        <item>@string/lock_clock_font_roadrage</item>
-        <item>@string/lock_clock_font_sedgwick</item>
-        <item>@string/lock_clock_font_snowstorm</item>
-        <item>@string/lock_clock_font_themeable</item>
-        <item>@string/lock_clock_font_union</item>
-        <item>@string/lock_clock_font_vibur</item>
-        <item>@string/lock_clock_font_voltaire</item>
+        <item>@string/lock_clock_font_robotocondensed</item>
+        <item>@string/lock_clock_font_rosemary</item>
+        <item>@string/lock_clock_font_rubik</item>
+        <item>@string/lock_clock_font_samsungone</item>
+        <item>@string/lock_clock_font_oneplusslate</item>
+        <item>@string/lock_clock_font_sonysketch</item>
+        <item>@string/lock_clock_font_storopia</item>
+        <item>@string/lock_clock_font_surfer</item>
+        <item>@string/lock_clock_font_ubuntu</item>
+        <item>@string/lock_clock_font_zilla-slab</item>
     </string-array>
      <string-array name="lock_date_fonts_values" translatable="false">
         <item>0</item>
@@ -615,6 +620,11 @@
         <item>37</item>
         <item>38</item>
         <item>39</item>
+        <item>40</item>
+        <item>41</item>
+        <item>42</item>
+        <item>43</item>
+        <item>44</item>
     </string-array>
 
 </resources>
