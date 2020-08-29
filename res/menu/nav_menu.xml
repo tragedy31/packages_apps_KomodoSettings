@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_about"
+        android:icon="@drawable/ic_settings_komodo_about"
+        android:title="About Komodo" />
+
+    <item
+        android:id="@+id/navigation_theming"
+        android:icon="@drawable/ic_settings_interface" 
+        android:title="UI/UX" />
+
+    <item
+        android:id="@+id/navigation_gestures"
+        android:icon="@drawable/ic_settings_gestures"
+        android:title="Gestures/Buttons" />
+
+    <item
+        android:id="@+id/navigation_notifications"
+        android:icon="@drawable/ic_settings_notifications"
+        android:title="Notifications" />
+
+    <item
+        android:id="@+id/navigation_misc"
+        android:icon="@drawable/ic_settings_misc"
+        android:title="Misc" />
+
+</menu>
