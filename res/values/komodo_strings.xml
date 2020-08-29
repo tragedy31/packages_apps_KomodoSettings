@@ -16,7 +16,7 @@
 -->
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="komodo_settings_title">Komodo Features</string>
+    <string name="komodo_settings_title">Komodo Settings</string>
     <string name="komodo_dashboard_summary">Original from indonesia</string>
 	
     <!-- Categories -->
@@ -357,7 +357,7 @@
     <string name="qs_rows_category">QS Rows</string>
     <string name="qs_rows_portrait_title">Rows (Portrait)</string>
     <string name="qs_rows_landscape_title">Rows (Landscape)</string> 
-    <string name="qs_footer">If there are no changes, please restart the SYSTEM UI</string>
+    <string name="theming_footer">If there are no changes, please restart the SYSTEM UI</string>
 
     <!-- Three-fingers-swipe to screenshot -->
     <string name="three_finger_gesture">Swipe to screenshot</string>

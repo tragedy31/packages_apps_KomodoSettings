@@ -15,15 +15,10 @@
 --> 
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="@string/interface_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
     
     <PreferenceCategory
         android:key="theme_customization_category">
-
-        <ListPreference
-            android:key="android.theme.customization.pill_gesture"
-            android:title="@string/theme_customization_pill_gesture_title"/>
 
         <ListPreference
             android:key="android.theme.customization.statusbar_height"
@@ -32,10 +27,6 @@
         <ListPreference
             android:key="android.theme.customization.ui_radius"
             android:title="@string/theme_customization_ui_radius_title"/>
-
-        <ListPreference
-            android:key="android.theme.customization.ui_radius_vol"
-            android:title="@string/theme_customization_ui_radius_vol_title"/>
 
     </PreferenceCategory>
 
@@ -62,4 +53,299 @@
         android:fragment="com.komodo.settings.fragments.CutoutFragment" />
 
     </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="network_traffic"
+        android:title="@string/statusbar_trafficat"/>
+
+        <ListPreference
+            android:key="network_traffic_location"
+            android:title="@string/network_traffic_state_title"
+            android:summary="%s"
+            android:entries="@array/network_traffic_location_entries"
+            android:entryValues="@array/network_traffic_location_values"
+            android:persistent="false" />
+    
+        <ListPreference
+            android:key="network_traffic_type"
+            android:title="@string/network_traffic_type"
+            android:entries="@array/show_network_traffic_type_entries"
+            android:entryValues="@array/show_network_traffic_type_values"
+            android:persistent="false" />
+    
+        <ListPreference
+            android:key="network_traffic_layout"
+            android:title="@string/network_traffic_layout"
+            android:entries="@array/network_traffic_layout_entries"
+            android:entryValues="@array/network_traffic_layout_values"
+            android:persistent="false" />
+    
+        <com.komodo.settings.preferences.SystemSettingSeekBarPreference
+            android:key="network_traffic_autohide_threshold"
+            android:title="@string/network_traffic_autohide_threshold_title"
+            android:max="10"
+            android:min="0"
+            android:defaultValue="1"
+            settings:units="KiB/s" />
+    
+        <com.komodo.settings.preferences.SystemSettingSeekBarPreference
+            android:key="network_traffic_refresh_interval"
+            android:title="@string/network_traffic_refresh_interval_title"
+            android:max="10"
+            android:min="1"
+            android:defaultValue="2"
+            settings:units="sec" />
+    
+        <com.komodo.settings.preferences.SystemSettingSwitchPreference
+            android:key="network_traffic_hidearrow"
+            android:title="@string/network_traffic_hidearrow"
+            android:summary="@string/network_traffic_hidearrow_summary"
+            android:defaultValue="true" />
+    
+        <PreferenceCategory
+            android:key="status_carrier"
+            android:title="@string/status_carrier_category_title"/>
+    
+            <Preference
+                android:key="carrier_label"
+                android:title="@string/status_carrier_title"
+                android:fragment="com.komodo.settings.fragments.CarrierLabel" />
+
+
+    <PreferenceCategory
+        android:key="battery_bar"
+        android:title="@string/battery_bar_category_title"/>
+
+		    <Preference
+            android:key="batterybar_settings"
+            android:title="@string/battery_bar_title"
+            android:summary="@string/battery_bar_summary"
+            android:fragment="com.komodo.settings.fragments.BatterybarSettings" />
+
+    <PreferenceCategory
+         android:key="status_bar_logo"
+         android:title="@string/status_bar_logo_category_title"/>
+
+	      <Preference
+            android:key="status_bar_logo"
+            android:title="@string/status_bar_logo_category_title"
+            android:summary="@string/status_bar_logo_category_summary"
+            android:fragment="com.komodo.settings.fragments.StatusBarLogo" />
+
+		    <Preference
+            android:key="clock_settings"
+            android:title="@string/clock_style_category_title"
+            android:summary="@string/clock_style_category_summary"
+            android:fragment="com.komodo.settings.fragments.ClockSettings" />
+
+        <com.komodo.settings.preferences.SystemSettingSwitchPreference
+            android:key="show_fourg_icon"
+            android:title="@string/show_fourg_icon_title"
+            android:summary="@string/show_fourg_icon_summary"
+            android:defaultValue="false"/>
+
+        <com.komodo.settings.preferences.SystemSettingSwitchPreference
+            android:key="volte_icon"
+            android:title="@string/volte_icon_title"
+            android:summary="@string/volte_icon_summary"
+            android:defaultValue="true"/>
+
+    <PreferenceCategory
+        android:key="statusbar_gestures"
+        android:title="@string/gestures_title">
+
+        <com.komodo.settings.preferences.SystemSettingSwitchPreference
+            android:key="double_tap_sleep_gesture"
+            android:title="@string/double_tap_sleep_gesture_title"
+            android:summary="@string/double_tap_sleep_gesture_summary"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+    
+        <PreferenceCategory
+        android:key="qs_theme_category"
+        android:title="@string/qs_theme_category">
+
+        <com.komodo.settings.preferences.SystemSettingSeekBarPreference
+            android:key="qs_panel_bg_alpha"
+            android:title="@string/qs_panel_alpha_title"
+            android:max="255"
+            settings:min="100"
+            settings:interval="5"
+            android:defaultValue="255" />
+        
+        <com.komodo.settings.preferences.SystemSettingSwitchPreference
+            android:key="footer_text_show"
+            android:title="@string/footer_text_show_title"
+            android:summary="@string/footer_text_show_summary"
+            android:defaultValue="false" />
+
+        <com.komodo.settings.preferences.SystemSettingEditTextPreference
+            android:key="footer_text_string"
+            android:title="@string/footer_text_string_title"
+            android:summary="@string/footer_text_string_summary"
+            android:dependency="footer_text_show" />
+
+        <com.komodo.settings.preferences.SystemSettingSwitchPreference
+            android:key="qs_running_services_toggle"
+            android:title="@string/qs_running_services_title"
+            android:summary="@string/qs_running_services_summary"
+            android:defaultValue="true" />
+
+        <com.komodo.settings.preferences.SystemSettingSwitchPreference 
+            android:key="qs_datausage" 
+            android:title="@string/qs_datausage_title" 
+            android:entryValues="@array/qs_datausage_values"
+            android:defaultValue="0" />
+    </PreferenceCategory>
+
+    <com.komodo.settings.preferences.SystemSettingMasterSwitchPreference
+        android:key="status_bar_custom_header"
+        android:fragment="com.komodo.settings.fragments.QsHeader"
+        android:title="@string/status_bar_custom_header_title"
+        android:summary="@string/status_bar_custom_header_summary"
+        android:defaultValue="false" />
+
+    <com.komodo.settings.preferences.SystemSettingSwitchPreference 
+        android:key="qs_tile_title_visibility" 
+        android:title="@string/qs_tile_title_visibility_title" 
+        android:summary="@string/qs_tile_title_visibility_summary" 
+        android:defaultValue="true" /> 
+
+    <PreferenceCategory
+        android:key="quick_settings_animations"
+        android:title="@string/qs_tile_animation_title"/>
+
+        <ListPreference
+            android:key="qs_tile_animation_style"
+            android:title="@string/qs_tile_animation_style_title"
+            android:entries="@array/qs_tile_animation_style_entries"
+            android:entryValues="@array/qs_tile_animation_style_values"
+            android:persistent="false" />
+
+        <ListPreference
+            android:key="qs_tile_animation_duration"
+            android:title="@string/qs_tile_animation_duration_title"
+            android:entries="@array/qs_tile_animation_duration_entries"
+            android:entryValues="@array/qs_tile_animation_duration_values"
+            android:persistent="false" />
+
+        <ListPreference
+            android:key="qs_tile_animation_interpolator"
+            android:title="@string/qs_tile_animation_interpolator_title"
+            android:entries="@array/qs_tile_animation_interpolator_entries"
+            android:entryValues="@array/qs_tile_animation_interpolator_values"
+            android:persistent="false" />
+
+    <PreferenceCategory 
+        android:key="qs_columns_category" 
+        android:title="@string/qs_columns_category" />
+
+        <com.komodo.settings.preferences.CustomSeekBarPreference
+            android:key="qs_columns_portrait"
+            android:title="@string/qs_columns_portrait_title"
+            android:max="8"
+            settings:min="3"
+            settings:units=""
+            android:defaultValue="4"
+            android:persistent="false" />
+
+        <com.komodo.settings.preferences.CustomSeekBarPreference
+            android:key="qs_columns_landscape"
+            android:title="@string/qs_columns_landscape_title"
+            android:max="8"
+            settings:min="3"
+            settings:units=""
+            android:defaultValue="4"
+            android:persistent="false" />
+
+     <PreferenceCategory
+        android:key="qs_rows_category"
+        android:title="@string/qs_rows_category" />
+
+        <com.komodo.settings.preferences.CustomSeekBarPreference
+            android:key="qs_rows_portrait"
+            android:title="@string/qs_rows_portrait_title"
+            android:max="4"
+            settings:min="1"
+            settings:units=""
+            android:defaultValue="3"
+            android:persistent="false" />
+
+        <com.komodo.settings.preferences.CustomSeekBarPreference
+            android:key="qs_rows_landscape"
+            android:title="@string/qs_rows_landscape_title"
+            android:max="2"
+            settings:min="1"
+            settings:units=""
+            android:defaultValue="2"
+            android:persistent="false" />
+
+     <PreferenceCategory
+        android:key="qs_blur_category"
+        android:title="@string/qs_blur_category" />
+
+        <com.komodo.settings.preferences.SystemSettingSwitchPreference
+            android:key="qs_blur"
+            android:title="@string/blur_quicksettings"
+            android:summary="@string/blur_quicksettings_subtitle"
+            android:defaultValue="true" />
+
+        <com.komodo.settings.preferences.SystemSettingSeekBarPreference
+            android:key="qs_blur_alpha"
+            android:title="@string/qs_blur_alpha_title"
+            android:summary="@string/qs_blur_alpha_summary"
+            android:max="100"
+            settings:min="1"
+            android:defaultValue="100"
+            android:dependency="qs_blur" />
+            
+      <PreferenceCategory
+          android:key="lockscreen_category"
+          android:title="@string/lockscreen_title" >
+        
+          <com.komodo.settings.preferences.SystemSettingSwitchPreference
+              android:key="fp_unlock_keystore"
+              android:title="@string/fp_unlock_keystore_title"
+              android:summary="@string/fp_unlock_keystore_summary"
+              android:defaultValue="false" />
+      
+          <com.komodo.settings.preferences.SystemSettingSwitchPreference
+              android:key="fingerprint_success_vib"
+              android:title="@string/fprint_sucess_vib_title"
+              android:summary="@string/fprint_sucess_vib_summary"
+              android:defaultValue="true" />
+      
+          <com.komodo.settings.preferences.SystemSettingSwitchPreference
+              android:key="fingerprint_error_vib"
+              android:title="@string/fprint_error_vib_title"
+              android:summary="@string/fprint_error_vib_summary"
+              android:defaultValue="true" />
+         
+          <com.komodo.settings.preferences.SystemSettingSwitchPreference
+              android:key="lockscreen_battery_info"
+              android:title="@string/lockscreen_battery_info_title"
+              android:summary="@string/lockscreen_battery_info_summary"
+              android:defaultValue="true" />
+      
+          <ListPreference
+              android:key="lock_clock_font_style"
+              android:title="@string/lock_clock_font_title"
+              android:dialogTitle="@string/lock_clock_font_dialog_title"
+              android:entries="@array/lock_clock_fonts_entries"
+              android:entryValues="@array/lock_clock_fonts_values"
+              android:summary="@string/lock_clock_font_summary"
+              android:persistent="false" />
+      
+          <ListPreference
+              android:key="lock_date_fonts"
+              android:title="@string/lock_date_font_title"
+              android:dialogTitle="@string/lock_date_font_dialog_title"
+              android:entries="@array/lock_date_fonts_entries"
+              android:entryValues="@array/lock_date_fonts_values"
+              android:summary="@string/lock_date_font_summary"
+              android:persistent="false" />
+        
+      </PreferenceCategory>
+      
 </PreferenceScreen>

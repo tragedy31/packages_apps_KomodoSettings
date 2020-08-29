@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2018 Rebellion-OS
-     Copyright (C) 2019 Komodo-OS
+<!-- Copyright (C) 2020 Komodo-OS
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -14,97 +13,31 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<PreferenceScreen 
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-    android:title="@string/komodo_settings_title" >
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:title="@string/komodo_settings_title"
+    tools:context="com.komodo.settings.KomodoSettings" >
 
-	<PreferenceCategory
-		android:key="about rom"
-		android:title="@string/komodo_about_rom" >
+    <FrameLayout
+      android:id="@+id/fragment_container"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_above="@id/nav_bottom" />
 
-        <!-- About -->
-        <Preference
-            android:key="about_catagory"
-            android:title="@string/about_title"
-            android:fragment="com.komodo.settings.fragments.About"
-            android:icon="@drawable/ic_settings_komodo_about"/>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+      android:id="@+id/nav_bottom"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:background="@drawable/bottombar_bg"
+      app:itemRippleColor="@color/bottombar_ripple"
+      app:itemIconTint="@drawable/categories_selector"
+      app:itemTextColor="@drawable/categories_selector"
+      app:menu="@menu/nav_menu" />
 
-	</PreferenceCategory>
-
-    <PreferenceCategory
-            android:key="features"
-            android:title="Komodo Features" >
-			
-        <!-- Status Bar -->
-        <Preference
-            android:key="statusbar_category"
-            android:title="@string/statusbar_title"
-            android:fragment="com.komodo.settings.fragments.StatusBar" 
-            android:icon="@drawable/ic_settings_statusbar"/>
-
-        <!-- Interface -->
-        <Preference
-            android:key="interface_category"
-            android:title="@string/interface_title"
-            android:fragment="com.komodo.settings.fragments.Interface"
-            android:icon="@drawable/ic_settings_interface"/>
-
-        <!-- Quick Settings -->
-        <Preference
-            android:key="quicksettings_category"
-            android:title="@string/quicksettings_title"
-            android:fragment="com.komodo.settings.fragments.QuickSettings"
-            android:icon="@drawable/ic_settings_quicksettings"/>
-
-        <!-- Buttons -->
-        <Preference
-            android:key="buttons_category"
-            android:title="@string/buttons_title"
-            android:fragment="com.komodo.settings.fragments.Buttons"
-            android:icon="@drawable/ic_settings_buttons"/>
-        
-        <!-- Gesture -->
-        <Preference
-            android:key="gestures_category"
-            android:title="@string/gestures_title"
-            android:fragment="com.komodo.settings.fragments.Gestures"
-            android:icon="@drawable/ic_settings_gesture"/>
-
-        <!-- Lock Screen -->
-        <Preference
-            android:key="lockscreen_category"
-            android:title="@string/lockscreen_title" 
-            android:fragment="com.komodo.settings.fragments.LockScreen"
-            android:icon="@drawable/ic_settings_lockscreen"/>
-
-        <!-- Notifications -->
-        <Preference
-            android:key="notifications_category"
-            android:title="@string/notifications_title"
-            android:fragment="com.komodo.settings.fragments.Notifications"
-            android:icon="@drawable/ic_settings_notifications"/>
-
-        <!-- Animation -->
-        <Preference
-            android:key="animations_category"
-            android:title="@string/animations_title"
-            android:fragment="com.komodo.settings.fragments.Animations"
-            android:icon="@drawable/ic_settings_animation"/>
-
-        <!-- Battery Saving -->
-        <Preference
-            android:key="battery_category"
-            android:title="@string/battery_title"
-            android:fragment="com.komodo.settings.fragments.Battery"
-            android:icon="@drawable/ic_settings_batterysave"/>
-
-        <!-- Misc -->
-        <Preference
-            android:key="misc_category"
-            android:title="@string/misc_title"
-            android:fragment="com.komodo.settings.fragments.Misc"
-            android:icon="@drawable/ic_settings_misc"/>
-
-    </PreferenceCategory>
-</PreferenceScreen>
+</RelativeLayout>

@@ -15,8 +15,7 @@
 -->
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-    android:title="@string/battery_title" >
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
     <com.komodo.settings.preferences.SystemSettingSwitchPreference
         android:key="smart_charging"

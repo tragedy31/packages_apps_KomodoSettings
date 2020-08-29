@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.komodo.settings.fragments;
+package com.komodo.settings.categories;
 
 import android.content.ContentResolver;
 import android.content.res.Resources;
@@ -29,23 +29,21 @@ import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.SwitchPreference;
 import android.provider.Settings;
 
+import com.android.internal.logging.nano.MetricsProto;
+
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-import com.komodo.settings.preferences.CustomSeekBarPreference;
-
-import com.android.internal.logging.nano.MetricsProto;
-
-import com.android.internal.logging.nano.MetricsProto;
 import com.android.internal.util.hwkeys.ActionConstants;
 import com.android.internal.util.hwkeys.ActionUtils;
 
 import com.komodo.settings.preferences.ActionFragment;
 import com.komodo.settings.preferences.CustomSeekBarPreference;
 
-public class Buttons extends ActionFragment implements OnPreferenceChangeListener {
+public class Gestures extends ActionFragment implements
+OnPreferenceChangeListener {
 
-        //Keys
+    //Keys
     private static final String KEY_BUTTON_BRIGHTNESS = "button_brightness";
     private static final String KEY_BUTTON_BRIGHTNESS_SW = "button_brightness_sw";
     private static final String KEY_BACKLIGHT_TIMEOUT = "backlight_timeout";
@@ -79,7 +77,9 @@ public class Buttons extends ActionFragment implements OnPreferenceChangeListene
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        addPreferencesFromResource(R.xml.komodo_settings_buttons);
+        addPreferencesFromResource(R.xml.komodo_settings_gestures);
+        PreferenceScreen prefSet = getPreferenceScreen();
+        
         final Resources res = getResources();
         final ContentResolver resolver = getActivity().getContentResolver();
         final PreferenceScreen prefScreen = getPreferenceScreen();

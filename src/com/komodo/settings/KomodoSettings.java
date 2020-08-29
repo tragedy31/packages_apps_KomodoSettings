@@ -21,21 +21,98 @@ package com.komodo.settings;
 import com.android.internal.logging.nano.MetricsProto;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
+import android.app.Dialog;
+import android.content.ContentResolver;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.SharedPreferences;
+import android.content.res.Resources;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.SystemProperties;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.Surface;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.Toast;
+
 import androidx.preference.Preference;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.annotation.NonNull;
+
+import com.komodo.settings.categories.About;
+import com.komodo.settings.categories.Interface;
+import com.komodo.settings.categories.Gestures;
+import com.komodo.settings.categories.Notifications;
+import com.komodo.settings.categories.Misc;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
 public class KomodoSettings extends SettingsPreferenceFragment {
 
+    BottomNavigationView bottomNavigation;
+
     @Override
-    public void onCreate(Bundle icicle) {
-        super.onCreate(icicle);
-        addPreferencesFromResource(R.xml.komodo_settings);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+      View view = inflater.inflate(R.xml.komodo_settings, container, false);
+      final BottomNavigationView bottomNavigation = (BottomNavigationView) view.findViewById(R.id.nav_bottom);
+      openFragment(new About());
+
+      bottomNavigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+          @Override
+          public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            switch (item.getItemId()) {
+              case R.id.navigation_about:
+                openFragment(new About());
+                break;
+              case R.id.navigation_theming:
+                openFragment(new Interface());
+                break;
+              case R.id.navigation_notifications:
+                openFragment(new Notifications());
+                break;
+              case R.id.navigation_gestures:
+                openFragment(new Gestures());
+                break;
+              case R.id.navigation_misc:
+                openFragment(new Misc());
+                break;
+            }
+            return true;
+          }
+       });
+      return view;
+    }
+
+    public void openFragment(Fragment fragment) {
+      FragmentTransaction transaction = getFragmentManager().beginTransaction();
+      transaction.replace(R.id.fragment_container, fragment);
+      transaction.commit();
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+      super.onCreate(savedInstanceState);
+      getActivity().setTitle(R.string.komodo_settings_title);
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        /* Dont add super. to fix duplicate Search and Help & Feedback */
     }
 
     @Override

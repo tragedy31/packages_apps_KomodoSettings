@@ -13,14 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.komodo.settings.fragments;
+package com.komodo.settings.categories;
 
 import android.app.Activity;
-import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.os.Bundle;
+import android.os.SystemProperties;
 import android.provider.Settings;
 import androidx.preference.*;
 
@@ -29,42 +28,34 @@ import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-import com.komodo.settings.preferences.CustomSeekBarPreference;
-import com.komodo.settings.preferences.GlobalSettingMasterSwitchPreference;
+import com.komodo.settings.preferences.SystemSettingMasterSwitchPreference;
 
-public class Notifications extends SettingsPreferenceFragment
+public class Misc extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
 
-    public static final String TAG = "Notifications";
-    private static final String HEADS_UP_NOTIFICATIONS_ENABLED = "heads_up_notifications_enabled";
+    public static final String TAG = "Misc";
 
-    private GlobalSettingMasterSwitchPreference mHeadsUpEnabled;
+    private static final String GAMING_MODE_ENABLED = "gaming_mode_enabled";
+
+    private SystemSettingMasterSwitchPreference mGamingMode;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.komodo_settings_notifications);
-        PreferenceScreen prefScreen = getPreferenceScreen();
-        final Resources res = getResources();
+        addPreferencesFromResource(R.xml.komodo_settings_misc);
 
-        mHeadsUpEnabled = (GlobalSettingMasterSwitchPreference) findPreference(HEADS_UP_NOTIFICATIONS_ENABLED);
-        mHeadsUpEnabled.setOnPreferenceChangeListener(this);
-        int headsUpEnabled = Settings.Global.getInt(getContentResolver(),
-                HEADS_UP_NOTIFICATIONS_ENABLED, 1);
-        mHeadsUpEnabled.setChecked(headsUpEnabled != 0);
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
+        mGamingMode = (SystemSettingMasterSwitchPreference) findPreference(GAMING_MODE_ENABLED);
+        mGamingMode.setChecked((Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.GAMING_MODE_ENABLED, 0) == 1));
+        mGamingMode.setOnPreferenceChangeListener(this);
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mHeadsUpEnabled) {
+		if (preference == mGamingMode) {
             boolean value = (Boolean) newValue;
-            Settings.Global.putInt(getContentResolver(),
-		            HEADS_UP_NOTIFICATIONS_ENABLED, value ? 1 : 0);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.GAMING_MODE_ENABLED, value ? 1 : 0);
             return true;
         }
         return false;
