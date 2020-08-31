@@ -33,6 +33,7 @@ limitations under the License.
         <item>Rafi</item>
         <item>Fadlyas</item>
         <item>ZHANtech</item>
+        <item>TheSync</item>
 	</string-array>
 
     <!-- Devices maintained by maintainer -->
@@ -53,6 +54,7 @@ limitations under the License.
         <item>Xiaomi Redmi Note 4X (mido)</item>
         <item>Xiaomi Redmi 4A (rolex)</item>
         <item>Xiaomi Redmi 4X (santoni)</item>
+        <item>Xiaomi Redmi 7 (onclite)</item>
 	</string-array>
 
     <!-- Telegram URL of maintainer -->
@@ -73,6 +75,7 @@ limitations under the License.
         <item>https://t.me/Tuwaissuuu</item>
         <item>https://t.me/fadlyas07</item>
         <item>https://t.me/zhantech</item>
+        <item>https://t.me/TheSync</item>
 	</string-array>
 
 </resources>
