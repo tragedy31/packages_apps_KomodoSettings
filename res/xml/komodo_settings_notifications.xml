@@ -21,18 +21,22 @@
         android:key="account_animation"
         android:layout="@layout/notification_animation" />
 
-    <Preference
+    <PreferenceCategory
+        android:key="notification_stat"
+        android:title="@string/notifications_title" />
+
+        <Preference
             android:key="ambient_light_settings"
             android:title="@string/ambient_light_settings_title"
             android:summary="@string/pulse_ambient_light_summary"
             android:fragment="com.komodo.settings.fragments.AmbientLight" />
-
-    <!-- Battery full charged notification -->
-    <com.komodo.settings.preferences.SystemSettingSwitchPreference
-        android:key="battery_fully_charged_notif"
-        android:title="@string/battery_fully_charged_notif_title"
-        android:summary="@string/battery_fully_charged_notif_summary"
-        android:defaultValue="false" />
+      
+        <!-- Battery full charged notification -->
+        <com.komodo.settings.preferences.SystemSettingSwitchPreference
+            android:key="battery_fully_charged_notif"
+            android:title="@string/battery_fully_charged_notif_title"
+            android:summary="@string/battery_fully_charged_notif_summary"
+            android:defaultValue="false" />
 
     <PreferenceCategory
         android:key="notification_stat"
