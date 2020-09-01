@@ -123,6 +123,7 @@
     <!-- Theming -->
     <string name="theme_select_title">Themes</string>
     <string name="theme_select_summary">Browse and select installed themes</string>
+    <string name="gvm_category" translatable="false">GVM</string>
     <string name="theme_customization_pill_gesture_title">Pill gesture</string>
     <string name="theme_customization_statusbar_height_title">Statusbar height</string>
     <string name="theme_customization_ui_radius_title">UI radius</string>
