@@ -19,7 +19,7 @@
 
     <Preference
         android:key="account_animation"
-        android:layout="@layout/notification_animation" />
+        android:layout="@layout/notif_animation" />
 
     <PreferenceCategory
         android:key="notification_stat"
