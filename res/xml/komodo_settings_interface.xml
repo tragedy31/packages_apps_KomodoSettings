@@ -16,7 +16,11 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
-    
+
+    <Preference
+        android:key="account_animation"
+        android:layout="@layout/theming_animation" />
+
     <PreferenceCategory
         android:key="theme_customization_category">
 
