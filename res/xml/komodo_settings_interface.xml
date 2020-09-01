@@ -36,6 +36,35 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:key="style_category"
+        android:title="@string/style_category">
+
+        <Preference
+            android:persistent="false"
+            android:title="@string/theme_select_title"
+            android:key="theme_select_activity"
+            android:summary="@string/theme_select_summary">
+        <intent
+            android:targetPackage="com.android.customization"
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.android.customization.picker.CustomizationPickerActivity" />
+        </Preference>
+
+
+    </PreferenceCategory>
+
+    <Preference
+        android:persistent="false"
+        android:title="@string/theme_select_title"
+        android:key="theme_select_activity"
+        android:summary="@string/theme_select_summary">
+    <intent
+        android:targetPackage="com.android.customization"
+        android:action="android.intent.action.MAIN"
+        android:targetClass="com.android.customization.picker.CustomizationPickerActivity" />
+    </Preference>
+
+    <PreferenceCategory
         android:key="volume_bar_category"
         android:title="@string/volume_bar_category">
 

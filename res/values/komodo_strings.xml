@@ -32,7 +32,7 @@
     <string name="statusbar_title">Status Bar</string>
     <string name="battery_title">Battery</string>
     <string name="interface_title">Theming</string>
-	
+
     <!-- General strings -->
     <string name="ok">OK</string>
     <string name="reset">Reset</string>
@@ -121,7 +121,8 @@
     <string name="status_bar_custom_header_title">Header image</string>
 
     <!-- Theming -->
-    <string name="theme_select_title">Themes</string>
+    <string name="style_category">Theme Browser</string>
+    <string name="theme_select_title">Style and Wallpaper</string>
     <string name="theme_select_summary">Browse and select installed themes</string>
     <string name="gvm_category" translatable="false">GVM</string>
     <string name="theme_customization_pill_gesture_title">Pill gesture</string>

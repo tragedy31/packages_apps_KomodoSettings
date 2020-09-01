@@ -71,6 +71,7 @@ public class Interface extends DashboardFragment
 
     public static final String TAG = "Theming";
 
+    private Preference mThemeBrowse;
     private static final String PREF_KEY_CUTOUT = "cutout_settings";
 
     //Quick Settings
@@ -131,6 +132,9 @@ public class Interface extends DashboardFragment
                 Settings.System.OMNI_STATUS_BAR_CUSTOM_HEADER, 0);
         mCustomHeader.setChecked(qsHeader != 0);
         mCustomHeader.setOnPreferenceChangeListener(this);
+
+        mThemeBrowse = findPreference("theme_select_activity");
+        mThemeBrowse.setEnabled(isBrowseThemeAvailable());
 
          // QS animation
         mTileAnimationStyle = (ListPreference) findPreference(PREF_TILE_ANIM_STYLE);
@@ -412,6 +416,13 @@ public class Interface extends DashboardFragment
             default:
                 break;
         }
+    }
+
+    private boolean isBrowseThemeAvailable() {
+        PackageManager pm = getPackageManager();
+        Intent browse = new Intent();
+        browse.setClassName("com.android.customization", "com.android.customization.picker.CustomizationPickerActivity");
+        return pm.resolveActivity(browse, 0) != null;
     }
 
     @Override
