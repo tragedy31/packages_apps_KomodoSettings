@@ -432,16 +432,6 @@ public class Interface extends DashboardFragment
     }
 
     @Override
-    protected String getLogTag() {
-        return TAG;
-    }
-
-    @Override
-    protected int getPreferenceScreenResId() {
-        return R.xml.komodo_settings_interface;
-    }
-
-    @Override
     protected List<AbstractPreferenceController> createPreferenceControllers(Context context) {
         return buildPreferenceControllers(context, getSettingsLifecycle());
     }
@@ -454,6 +444,16 @@ public class Interface extends DashboardFragment
         controllers.add(new OverlayCategoryPreferenceController(context,
                 "android.theme.customization.ui_radius"));
         return controllers;
+    }
+
+    @Override
+    protected String getLogTag() {
+        return TAG;
+    }
+
+    @Override
+    protected int getPreferenceScreenResId() {
+        return R.xml.komodo_settings_interface;
     }
 
     public static final Indexable.SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
