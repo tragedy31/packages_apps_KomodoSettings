@@ -36,6 +36,7 @@ public class About extends SettingsPreferenceFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
+            setRetainInstance(true);
             addPreferencesFromResource(R.xml.komodo_settings_about);
             PreferenceCategory maintainers = (PreferenceCategory)findPreference("maintainers");
             String[] maintainers_title = getResources().getStringArray(R.array.maintainers_title);

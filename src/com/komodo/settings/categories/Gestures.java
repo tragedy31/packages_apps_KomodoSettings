@@ -77,6 +77,7 @@ OnPreferenceChangeListener {
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
+        setRetainInstance(true);
         addPreferencesFromResource(R.xml.komodo_settings_gestures);
         PreferenceScreen prefSet = getPreferenceScreen();
         

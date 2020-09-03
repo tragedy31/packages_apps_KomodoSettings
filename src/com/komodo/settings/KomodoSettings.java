@@ -71,26 +71,31 @@ public class KomodoSettings extends SettingsPreferenceFragment {
       View view = inflater.inflate(R.xml.komodo_settings, container, false);
       final BottomNavigationView bottomNavigation = (BottomNavigationView) view.findViewById(R.id.nav_bottom);
       openFragment(new About());
+      bottomNavigation.setSelectedItemId(R.id.navigation_about);
 
       bottomNavigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
           @Override
           public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            switch (item.getItemId()) {
-              case R.id.navigation_about:
-                openFragment(new About());
-                break;
-              case R.id.navigation_theming:
-                openFragment(new Interface());
-                break;
-              case R.id.navigation_notifications:
-                openFragment(new Notifications());
-                break;
-              case R.id.navigation_gestures:
-                openFragment(new Gestures());
-                break;
-              case R.id.navigation_misc:
-                openFragment(new Misc());
-                break;
+            if (item.getItemId() == bottomNavigation.getSelectedItemId()) {
+               return false;
+            } else {
+              switch (item.getItemId()) {
+                case R.id.navigation_about:
+                  openFragment(new About());
+                  break;
+                case R.id.navigation_theming:
+                  openFragment(new Interface());
+                  break;
+                case R.id.navigation_notifications:
+                  openFragment(new Notifications());
+                  break;
+                case R.id.navigation_gestures:
+                  openFragment(new Gestures());
+                  break;
+                case R.id.navigation_misc:
+                  openFragment(new Misc());
+                  break;
+              }
             }
             return true;
           }
@@ -107,6 +112,7 @@ public class KomodoSettings extends SettingsPreferenceFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
       super.onCreate(savedInstanceState);
+      setRetainInstance(true);
       getActivity().setTitle(R.string.komodo_settings_title);
     }
 
