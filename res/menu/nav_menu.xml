@@ -4,26 +4,26 @@
     <item
         android:id="@+id/navigation_about"
         android:icon="@drawable/ic_settings_komodo_about"
-        android:title="About Komodo" />
+        android:title="@string/navigation_about_title"/>
 
     <item
         android:id="@+id/navigation_theming"
         android:icon="@drawable/ic_settings_interface" 
-        android:title="UI/UX" />
+        android:title="@string/navigation_theming_title"/>
 
     <item
         android:id="@+id/navigation_gestures"
         android:icon="@drawable/ic_settings_gestures"
-        android:title="Gestures/Buttons" />
+        android:title="@string/navigation_gesture_title"/>
 
     <item
         android:id="@+id/navigation_notifications"
         android:icon="@drawable/ic_settings_notifications"
-        android:title="Notifications" />
+        android:title="@string/navigation_notification_title"/>
 
     <item
         android:id="@+id/navigation_misc"
         android:icon="@drawable/ic_settings_misc"
-        android:title="Misc" />
+        android:title="@string/navigation_misc_title"/>
 
 </menu>

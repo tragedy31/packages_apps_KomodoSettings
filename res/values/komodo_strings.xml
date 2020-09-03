@@ -33,6 +33,14 @@
     <string name="battery_title">Battery</string>
     <string name="interface_title">Theming</string>
 
+
+    <!-- Bottom navigation categories -->
+    <string name="navigation_about_title">About Komodo</string>
+    <string name="navigation_theming_title">UI/UX</string>
+    <string name="navigation_gesture_title">Gestures/Buttons</string>
+    <string name="navigation_notification_title">Notification</string>
+    <string name="navigation_misc_title">Misc</string>
+
     <!-- General strings -->
     <string name="ok">OK</string>
     <string name="reset">Reset</string>
