@@ -28,7 +28,7 @@
         android:layout_height="100dp"
         android:layout_gravity="center"
         android:clickable="false"
-        app:lottie_rawRes="@raw/notification"
+        app:lottie_rawRes="@raw/notif"
         app:lottie_loop="true"
         app:lottie_autoPlay="true" />
 
