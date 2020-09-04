@@ -133,6 +133,8 @@
     <string name="theme_select_title">Style and Wallpaper</string>
     <string name="theme_select_summary">Browse and select installed themes</string>
     <string name="gvm_category" translatable="false">GVM</string>
+    <string name="gvm_title">G-visual mod</string>
+    <string name="gvm_summary">Modify your UI with the G-visual mod</string>
     <string name="theme_customization_pill_gesture_title">Pill gesture</string>
     <string name="theme_customization_statusbar_height_title">Statusbar height</string>
     <string name="theme_customization_ui_radius_title">UI radius</string>

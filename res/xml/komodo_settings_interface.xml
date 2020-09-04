@@ -25,13 +25,10 @@
         android:key="theme_customization_category"
         android:title="@string/gvm_category">
 
-        <ListPreference
-            android:key="android.theme.customization.statusbar_height"
-            android:title="@string/theme_customization_statusbar_height_title"/>
-
-        <ListPreference
-            android:key="android.theme.customization.ui_radius"
-            android:title="@string/theme_customization_ui_radius_title"/>
+      <Preference
+          android:title="@string/gvm_title"
+          android:summary="@string/gvm_summary"
+          android:fragment="com.komodo.settings.fragments.Gvm" />
 
     </PreferenceCategory>
 

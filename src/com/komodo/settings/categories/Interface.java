@@ -49,7 +49,7 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
 import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.settingslib.core.lifecycle.Lifecycle;
-import com.android.settingslib.search.SearchIndexable;
+import com.android.settings.SettingsPreferenceFragment;
 
 import com.komodo.settings.preferences.SystemSettingMasterSwitchPreference;
 import com.komodo.settings.preferences.CustomSeekBarPreference;
@@ -66,8 +66,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
 
-public class Interface extends DashboardFragment
-        implements Indexable, Preference.OnPreferenceChangeListener {
+public class Interface extends SettingsPreferenceFragment
+        implements Preference.OnPreferenceChangeListener {
 
     public static final String TAG = "Theming";
 
@@ -431,22 +431,6 @@ public class Interface extends DashboardFragment
         return MetricsEvent.KOMODO_SETTINGS;
     }
 
-    @Override
-    protected List<AbstractPreferenceController> createPreferenceControllers(Context context) {
-        return buildPreferenceControllers(context, getSettingsLifecycle());
-    }
-
-    private static List<AbstractPreferenceController> buildPreferenceControllers(
-            Context context, Lifecycle lifecycle) {
-        final List<AbstractPreferenceController> controllers = new ArrayList<>();
-        controllers.add(new OverlayCategoryPreferenceController(context,
-                "android.theme.customization.statusbar_height"));
-        controllers.add(new OverlayCategoryPreferenceController(context,
-                "android.theme.customization.ui_radius"));
-        return controllers;
-    }
-
-    @Override
     protected String getLogTag() {
         return TAG;
     }
@@ -456,23 +440,4 @@ public class Interface extends DashboardFragment
         return R.xml.komodo_settings_interface;
     }
 
-    public static final Indexable.SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new BaseSearchIndexProvider() {
-                @Override
-                public List<SearchIndexableResource> getXmlResourcesToIndex(Context context,
-                        boolean enabled) {
-                    final ArrayList<SearchIndexableResource> result = new ArrayList<>();
-
-                    final SearchIndexableResource sir = new SearchIndexableResource(context);
-                    sir.xmlResId = R.xml.komodo_settings_interface;
-                    result.add(sir);
-                    return result;
-                }
-
-                @Override
-                public List<AbstractPreferenceController> createPreferenceControllers(
-                        Context context) {
-                    return buildPreferenceControllers(context, null);
-                }
-            };
 }
