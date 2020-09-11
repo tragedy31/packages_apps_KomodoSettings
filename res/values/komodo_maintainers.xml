@@ -55,6 +55,7 @@ limitations under the License.
         <item>Xiaomi Redmi 4A (rolex)</item>
         <item>Xiaomi Redmi 4X (santoni)</item>
         <item>Xiaomi Redmi 7 (onclite)</item>
+        <item>Realme 5 Pro (RMX1971)</item>
 	</string-array>
 
     <!-- Telegram URL of maintainer -->
@@ -76,6 +77,7 @@ limitations under the License.
         <item>https://t.me/fadlyas07</item>
         <item>https://t.me/zhantech</item>
         <item>https://t.me/TheSync</item>
+        <item>https://t.me/rifky_mcz</item>
 	</string-array>
 
 </resources>
