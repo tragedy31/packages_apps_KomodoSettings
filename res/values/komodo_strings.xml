@@ -129,9 +129,6 @@
     <string name="status_bar_custom_header_title">Header image</string>
 
     <!-- Theming -->
-    <string name="style_category">Theme Browser</string>
-    <string name="theme_select_title">Style and Wallpaper</string>
-    <string name="theme_select_summary">Browse and select installed themes</string>
     <string name="gvm_category" translatable="false">GVM</string>
     <string name="gvm_title">G-visual mod</string>
     <string name="gvm_summary">Modify your UI with the G-visual mod</string>

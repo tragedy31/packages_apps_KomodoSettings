@@ -71,7 +71,6 @@ public class Interface extends SettingsPreferenceFragment
 
     public static final String TAG = "Theming";
 
-    private Preference mThemeBrowse;
     private static final String PREF_KEY_CUTOUT = "cutout_settings";
 
     //Quick Settings
@@ -133,9 +132,6 @@ public class Interface extends SettingsPreferenceFragment
                 Settings.System.OMNI_STATUS_BAR_CUSTOM_HEADER, 0);
         mCustomHeader.setChecked(qsHeader != 0);
         mCustomHeader.setOnPreferenceChangeListener(this);
-
-        mThemeBrowse = findPreference("theme_select_activity");
-        mThemeBrowse.setEnabled(isBrowseThemeAvailable());
 
          // QS animation
         mTileAnimationStyle = (ListPreference) findPreference(PREF_TILE_ANIM_STYLE);
@@ -260,14 +256,14 @@ public class Interface extends SettingsPreferenceFragment
                     tileAnimationInterpolator, UserHandle.USER_CURRENT);
             updateTileAnimationInterpolatorSummary(tileAnimationInterpolator);
             return true;
-        }
-        if (preference == mCustomHeader) {
+
+        } else if (preference == mCustomHeader) {
             boolean header = (Boolean) newValue;
             Settings.System.putInt(resolver,
                     Settings.System.OMNI_STATUS_BAR_CUSTOM_HEADER, header ? 1 : 0);
             return true;
-        }
-        if (preference == mQsColumnsPortrait) {
+
+        } else if (preference == mQsColumnsPortrait) {
             int value = (Integer) newValue;
             Settings.System.putIntForUser(resolver,
                     Settings.System.QS_LAYOUT_COLUMNS, value, UserHandle.USER_CURRENT);
@@ -289,7 +285,7 @@ public class Interface extends SettingsPreferenceFragment
             return true;
 
          //Statusbar
-		    } else if (preference == mNetTrafficLocation) {
+	} else if (preference == mNetTrafficLocation) {
             int location = Integer.valueOf((String) newValue);
             int index = mNetTrafficLocation.findIndexOfValue((String) newValue);
             Settings.System.putInt(getActivity().getContentResolver(),
@@ -417,13 +413,6 @@ public class Interface extends SettingsPreferenceFragment
             default:
                 break;
         }
-    }
-
-    private boolean isBrowseThemeAvailable() {
-        PackageManager pm = getPackageManager();
-        Intent browse = new Intent();
-        browse.setClassName("com.android.customization", "com.android.customization.picker.CustomizationPickerActivity");
-        return pm.resolveActivity(browse, 0) != null;
     }
 
     @Override

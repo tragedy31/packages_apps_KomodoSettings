@@ -33,23 +33,6 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:key="style_category"
-        android:title="@string/style_category">
-
-        <Preference
-            android:persistent="false"
-            android:title="@string/theme_select_title"
-            android:key="theme_select_activity"
-            android:summary="@string/theme_select_summary">
-        <intent
-            android:targetPackage="com.android.customization"
-            android:action="android.intent.action.MAIN"
-            android:targetClass="com.android.customization.picker.CustomizationPickerActivity" />
-        </Preference>
-
-    </PreferenceCategory>
-
-    <PreferenceCategory
         android:key="volume_bar_category"
         android:title="@string/volume_bar_category">
 
@@ -373,5 +356,11 @@
          android:summary="@string/corners_summary"
          android:fragment="com.komodo.settings.fragments.RoundedCornersSettings" />
 
+    <Preference
+        android:key="statusbar_tuner"
+        android:title="@string/statusbar_items_title">
+        <intent android:targetPackage="com.android.systemui"
+                android:targetClass="com.android.systemui.tuner.StatusBarTuner" />
+    </Preference>
 
 </PreferenceScreen>
