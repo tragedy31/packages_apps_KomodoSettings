@@ -256,13 +256,11 @@ public class Interface extends SettingsPreferenceFragment
                     tileAnimationInterpolator, UserHandle.USER_CURRENT);
             updateTileAnimationInterpolatorSummary(tileAnimationInterpolator);
             return true;
-
         } else if (preference == mCustomHeader) {
             boolean header = (Boolean) newValue;
             Settings.System.putInt(resolver,
                     Settings.System.OMNI_STATUS_BAR_CUSTOM_HEADER, header ? 1 : 0);
             return true;
-
         } else if (preference == mQsColumnsPortrait) {
             int value = (Integer) newValue;
             Settings.System.putIntForUser(resolver,
@@ -283,8 +281,6 @@ public class Interface extends SettingsPreferenceFragment
             Settings.System.putIntForUser(resolver,
                     Settings.System.QS_LAYOUT_ROWS_LANDSCAPE, value, UserHandle.USER_CURRENT);
             return true;
-
-         //Statusbar
 	} else if (preference == mNetTrafficLocation) {
             int location = Integer.valueOf((String) newValue);
             int index = mNetTrafficLocation.findIndexOfValue((String) newValue);
@@ -320,23 +316,20 @@ public class Interface extends SettingsPreferenceFragment
             Settings.System.putIntForUser(resolver,
                     Settings.System.NETWORK_TRAFFIC_REFRESH_INTERVAL, interval, UserHandle.USER_CURRENT);
             return true;
+        } else if (preference == mLockDateFonts) {
+            Settings.System.putInt(getContentResolver(), Settings.System.LOCK_DATE_FONTS,
+                    Integer.valueOf((String) newValue));
+            mLockDateFonts.setValue(String.valueOf(newValue));
+            mLockDateFonts.setSummary(mLockDateFonts.getEntry());
+            return true;
+        } else if (preference == mLockClockFonts) {
+            Settings.System.putInt(getContentResolver(), Settings.System.LOCK_CLOCK_FONT_STYLE,
+                    Integer.valueOf((String) newValue));
+            mLockClockFonts.setValue(String.valueOf(newValue));
+            mLockClockFonts.setSummary(mLockClockFonts.getEntry());
+            return true;
         }
-        switch (preference.getKey()) {
-            case LOCK_CLOCK_FONT_STYLE:
-                Settings.System.putInt(getContentResolver(), Settings.System.LOCK_CLOCK_FONT_STYLE,
-                        Integer.valueOf((String) newValue));
-                mLockClockFonts.setValue(String.valueOf(newValue));
-                mLockClockFonts.setSummary(mLockClockFonts.getEntry());
-                return true;
-            case LOCK_DATE_FONTS:
-                Settings.System.putInt(getContentResolver(), Settings.System.LOCK_DATE_FONTS,
-                        Integer.valueOf((String) newValue));
-                mLockDateFonts.setValue(String.valueOf(newValue));
-                mLockDateFonts.setSummary(mLockDateFonts.getEntry());
-                return true;
-                default:
-                return false;
-        }
+        return false;
     }
 
 
