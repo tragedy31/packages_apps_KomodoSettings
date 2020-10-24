@@ -18,7 +18,7 @@ limitations under the License.
     <!-- Maintainers -->
     <string-array name="maintainers_title" translatable="false">
         <item>Kry9toN</item>
-        <item>Ramakun</item>
+        <item>GodongTelo</item>
         <item>Alanndz</item>
         <item>Harun</item>
         <item>Chann</item>
@@ -36,6 +36,7 @@ limitations under the License.
         <item>TheSync</item>
         <item>Rifky Mcz</item>
         <item>EsMarjan</item>
+	<item>henshin</item>
 	</string-array>
 
     <!-- Devices maintained by maintainer -->
@@ -59,12 +60,13 @@ limitations under the License.
         <item>Xiaomi Redmi 7 (onclite)</item>
         <item>Realme 5 Pro (RMX1971)</item>
         <item>Xiaomi Redmi Note 3 pro (Kenzo)</item>
+	<item>Realme 5/5s/5i (RMX1911/RMX2030)</item>
 	</string-array>
 
     <!-- Telegram URL of maintainer -->
     <string-array name="maintainers_url" translatable="false">
         <item>https://t.me/Kry9toN</item>
-        <item>https://t.me/rama982</item>
+        <item>https://t.me/godongtelo</item>
         <item>https://t.me/alanndz</item>
         <item>https://t.me/aarunalr</item>
         <item>https://t.me/kudalaper</item>
@@ -82,6 +84,7 @@ limitations under the License.
         <item>https://t.me/TheSync</item>
         <item>https://t.me/rifky_mcz</item>
         <item>https://t.me/rhardinata31</item>
+	<item>https://t.me/henztz</item>
 	</string-array>
 
 </resources>
