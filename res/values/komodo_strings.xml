@@ -97,4 +97,15 @@
     <string name="brightness_icon_summary">Show toggle for adaptive brightness near the slider</string>
     <string name="brightness_buttons_title">Brightness control buttons</string>
     <string name="brightness_buttons_summary">Show buttons beside the brightness slider to adjust brightness</string>
+
+    <!-- QS rows and columns -->
+    <string name="sysui_qqs_count_title">Columns (Quickbar)</string>
+    <string name="qs_layout_category">Layout</string>
+    <string name="qs_column_rows_settings_title">QS panel settings</string>
+    <string name="qs_columns_rows_category_title">QS columns and rows</string>
+    <string name="qs_rows_columns_title">QS rows and columns</string>
+    <string name="qs_rows_portrait_title">Rows (Portrait)</string>
+    <string name="qs_rows_landscape_title">Rows (Landscape)</string>
+    <string name="qs_columns_portrait_title">Columns (Portrait)</string>
+    <string name="qs_columns_landscape_title">Columns (Landscape)</string>
 </resources>
