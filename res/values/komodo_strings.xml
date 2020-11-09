@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2020 Komodo-OS-Rom
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="komodo_settings_title">Komodo Settings</string>
+    <string name="komodo_dashboard_summary">Original from indonesia</string>
+	
+    <!-- Categories -->
+    <string name="about_title">About</string>
+    <string name="animations_title">Animations</string>
+    <string name="buttons_title">Buttons</string>
+    <string name="gestures_title">Gestures</string>
+    <string name="lockscreen_title">Lock Screen</string>
+    <string name="misc_title">Miscellaneous</string>
+    <string name="notifications_title">Notifications</string>
+    <string name="panels_title">Panels</string>
+    <string name="quicksettings_title">Quick Settings</string>
+    <string name="statusbar_title">Status Bar</string>
+    <string name="battery_title">Battery</string>
+    <string name="interface_title">Theming</string>
+
+    <!-- Bottom navigation categories -->
+    <string name="navigation_about_title">About Komodo</string>
+    <string name="navigation_theming_title">UI/UX</string>
+    <string name="navigation_gesture_title">Gestures/Buttons</string>
+    <string name="navigation_notification_title">Notification</string>
+    <string name="navigation_misc_title">Misc</string>
+
+    <!-- General strings -->
+    <string name="ok">OK</string>
+    <string name="reset">Reset</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+
+    <!-- Color Picker -->
+    <string name="dialog_color_picker">Color Picker</string>
+    <string name="press_color_to_apply">Press on color below to apply</string>
+    <string name="arrow_right">→</string>
+    <string name="arrow_down">↓</string>
+    <string name="hex">Hex:</string>
+    <string name="hex_hint">#ff000000</string>
+    <string name="set">Set</string>
+    <string name="color_default">Default</string>
+
+    <!-- About KomodOS -->
+    <string name="komodo_about_rom">About</string>
+    <string name="komodo_about_info_summary">Komodo OS is an AOSP/CAF based Rom with customizations</string>
+    <string name="dev_info">About our Team</string>
+    <string name="leads">Team Leads</string>
+    <string name="github">Github</string>
+    <string name="github_description">View our source code</string>
+    <string name="telegram">Telegram</string>
+    <string name="telegram_description">Join our Telegram discussion group</string>
+    <string name="web">Download Center</string>
+    <string name="web_description">Visit our download portal</string>
+    <string name="maintainers">Maintainers</string>
+    <string name="dev_1" translatable="false">Dhimas Bagus Prayoga</string>
+    <string name="dev1_description">Founder, Device maintainer</string>
+    <string name="dev_2" translatable="false">Harun Al Rasyid</string>
+    <string name="dev2_description">Core Dev, Device maintainer</string>
+    <string name="dev_3" translatable="false">Ahmad Thoriq Najahi</string>
+    <string name="dev3_description">Core Dev, Device maintainer</string>
+    <string name="dev_4" translatable="false">Trisf</string>
+    <string name="dev4_description">Website creator</string>
+    <string name="dev_5" translatable="false">M. Gerald Febrinzaghi</string>
+    <string name="dev_6" translatable="false">Aryanata</string>
+    <string name="dev_7" translatable="false">alanndz</string>
+    <string name="dev7_description" translatable="false">Founder, Device maintainer</string>
+    <string name="maintainer_description">Maintains for %1$s</string>
+    <string name="donate">Donate</string>
+    <string name="donate_description">Support Us</string>
+    <string name="designers">Designer</string>
+
+    <!-- Theme -->
+    <string name="theming_footer">If there are no changes, please restart the SYSTEM UI</string>
+
+</resources>
