@@ -35,9 +35,9 @@ limitations under the License.
         <item>ZHANtech</item>
         <item>TheSync</item>
         <item>Rifky Mcz</item>
-        <item>EsMarjan && salmanSha08</item>
-	<item>henshin</item>
-	</string-array>
+        <item>EsMarjan x salmanSha08</item>
+        <item>henshin</item>
+    </string-array>
 
     <!-- Devices maintained by maintainer -->
     <string-array name="maintainers_devices" translatable="false">
@@ -60,8 +60,8 @@ limitations under the License.
         <item>Xiaomi Redmi 7 (onclite)</item>
         <item>Realme 5 Pro (RMX1971)</item>
         <item>Xiaomi Redmi Note 3 pro (Kenzo)</item>
-	<item>Realme 5/5s/5i (RMX1911/RMX2030)</item>
-	</string-array>
+        <item>Realme 5/5s/5i (RMX1911/RMX2030)</item>
+    </string-array>
 
     <!-- Telegram URL of maintainer -->
     <string-array name="maintainers_url" translatable="false">
@@ -84,7 +84,7 @@ limitations under the License.
         <item>https://t.me/TheSync</item>
         <item>https://t.me/rifky_mcz</item>
         <item>https://t.me/rhardinata31</item>
-	<item>https://t.me/henztz</item>
-	</string-array>
+        <item>https://t.me/henztz</item>
+    </string-array>
 
 </resources>
