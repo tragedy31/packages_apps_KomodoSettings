@@ -22,4 +22,14 @@
         android:key="ui_animation"
         android:layout="@layout/ui_animation" />
 
+    <com.komodo.settings.preferences.CardviewPreference
+        android:key="theming_category"
+        android:title="@string/theming_title"
+        android:fragment="com.komodo.settings.fragments.Theming" />
+
+    <com.komodo.settings.preferences.CardviewPreference
+        android:key="quicksettings_category"
+        android:title="@string/quicksettings_title"
+        android:fragment="com.komodo.settings.fragments.QuickSettings" />
+
 </PreferenceScreen>
