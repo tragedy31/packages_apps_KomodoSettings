@@ -30,7 +30,7 @@
     <string name="quicksettings_title">Quick Settings</string>
     <string name="statusbar_title">Status Bar</string>
     <string name="battery_title">Battery</string>
-    <string name="interface_title">Theming</string>
+    <string name="theming_title">Theming</string>
 
     <!-- Bottom navigation categories -->
     <string name="navigation_about_title">About Komodo</string>

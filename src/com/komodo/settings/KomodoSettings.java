@@ -48,7 +48,7 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.internal.logging.nano.MetricsProto;
 
 import com.komodo.settings.categories.About;
-import com.komodo.settings.categories.Interface;
+import com.komodo.settings.categories.Ui;
 import com.komodo.settings.categories.Gestures;
 import com.komodo.settings.categories.Notifications;
 import com.komodo.settings.categories.Misc;
@@ -137,7 +137,7 @@ public class KomodoSettings extends SettingsPreferenceFragment {
         PagerAdapter(FragmentManager fm) {
             super(fm);
             frags[0] = new About();
-            frags[1] = new Interface();
+            frags[1] = new Ui();
             frags[2] = new Notifications();
             frags[3] = new Gestures();
             frags[4] = new Misc();
