@@ -16,6 +16,7 @@
 package com.komodo.settings.categories;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.content.ContentResolver;
 import android.os.Bundle;
 import android.os.UserHandle;
@@ -24,61 +25,46 @@ import android.provider.Settings;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
+import androidx.preference.Preference.OnPreferenceChangeListener;
 
 import com.android.internal.logging.nano.MetricsProto;
-import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settingslib.search.SearchIndexable;
 import com.android.settings.search.BaseSearchIndexProvider;
 
-import com.komodo.settings.preferences.SystemSettingMasterSwitchPreference;
 import com.komodo.settings.preferences.CustomSeekBarPreference;
-import com.komodo.settings.preferences.SystemSettingSeekBarPreference;
-import com.komodo.settings.preferences.SystemSettingSwitchPreference;
-import com.komodo.settings.preferences.GlobalSettingMasterSwitchPreference;
 
-import java.util.Arrays;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Locale;
-
-public class Interface extends SettingsPreferenceFragment
-        implements Preference.OnPreferenceChangeListener {
-
-    public static final String TAG = "Theming";
+public class Ui extends SettingsPreferenceFragment implements
+OnPreferenceChangeListener {
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         setRetainInstance(true);
+        addPreferencesFromResource(R.xml.komodo_settings_ui);
+        PreferenceScreen prefSet = getPreferenceScreen();
 
-        PreferenceScreen prefScreen = getPreferenceScreen();
-        ContentResolver resolver = getActivity().getContentResolver();
+        final Resources res = getResources();
+        final ContentResolver resolver = getActivity().getContentResolver();
+        final PreferenceScreen prefScreen = getPreferenceScreen();
     }
 
-     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        ContentResolver resolver = getActivity().getContentResolver();
+            ContentResolver resolver = getActivity().getContentResolver();
         return false;
+    }
+
+    protected boolean usesExtendedActionsList() {
+        return true;
     }
 
     @Override
     public int getMetricsCategory() {
-        return MetricsEvent.KOMODO_SETTINGS;
-    }
-
-    protected String getLogTag() {
-        return TAG;
-    }
-
-    @Override
-    protected int getPreferenceScreenResId() {
-        return R.xml.komodo_settings_interface;
+        return MetricsProto.MetricsEvent.KOMODO_SETTINGS;
     }
 
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new BaseSearchIndexProvider(R.xml.komodo_settings_interface);
+            new BaseSearchIndexProvider(R.xml.komodo_settings_ui);
 }

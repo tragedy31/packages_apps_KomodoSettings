@@ -22,9 +22,9 @@
         android:title="@string/navigation_about_title"/>
 
     <item
-        android:id="@+id/navigation_theming"
-        android:icon="@drawable/ic_settings_interface" 
-        android:title="@string/navigation_theming_title"/>
+        android:id="@+id/navigation_ui"
+        android:icon="@drawable/ic_settings_ui" 
+        android:title="@string/navigation_ui_title"/>
 
     <item
         android:id="@+id/navigation_gestures"

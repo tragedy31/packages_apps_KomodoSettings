@@ -80,7 +80,7 @@ public class KomodoSettings extends SettingsPreferenceFragment {
         } else {
              if (item.getItemId() == R.id.navigation_about) {
                 viewPager.setCurrentItem(0);
-             } else if (item.getItemId() == R.id.navigation_theming) {
+             } else if (item.getItemId() == R.id.navigation_ui) {
                 viewPager.setCurrentItem(1);
              } else if (item.getItemId() == R.id.navigation_notifications) {
                 viewPager.setCurrentItem(2);
@@ -163,7 +163,7 @@ public class KomodoSettings extends SettingsPreferenceFragment {
         String titleString[];
         titleString = new String[]{
                 getString(R.string.navigation_about_title),
-                getString(R.string.navigation_theming_title),
+                getString(R.string.navigation_ui_title),
                 getString(R.string.navigation_gesture_title),
                 getString(R.string.navigation_notification_title),
                 getString(R.string.navigation_misc_title)};
