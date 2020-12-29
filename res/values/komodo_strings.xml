@@ -627,4 +627,8 @@
 
      <!-- Statusbar Tuner -->
     <string name="statusbar_items_title">Statusbar Items</string>
+
+    <!-- Statusbar dual row -->
+    <string name="statusbar_dual_row_title">Dual Row</string>
+    <string name="statusbar_dual_row_summary">Enable dual row statusbar for notifications</string>
 </resources>

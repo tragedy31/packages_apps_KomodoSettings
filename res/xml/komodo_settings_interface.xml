@@ -363,4 +363,10 @@
                 android:targetClass="com.android.systemui.tuner.StatusBarTuner" />
     </Preference>
 
+    <com.komodo.settings.preferences.SystemSettingSwitchPreference
+        android:key="statusbar_dual_row"
+        android:title="@string/statusbar_dual_row_title"
+        android:summary="@string/statusbar_dual_row_summary"
+        android:defaultValue="false" />
+
 </PreferenceScreen>
