@@ -30,11 +30,11 @@
     <string name="quicksettings_title">Quick Settings</string>
     <string name="statusbar_title">Status Bar</string>
     <string name="battery_title">Battery</string>
-    <string name="interface_title">Theming</string>
+    <string name="theming_title">Theming</string>
 
     <!-- Bottom navigation categories -->
     <string name="navigation_about_title">About Komodo</string>
-    <string name="navigation_theming_title">UI/UX</string>
+    <string name="navigation_ui_title">UI/UX</string>
     <string name="navigation_gesture_title">Gestures/Buttons</string>
     <string name="navigation_notification_title">Notification</string>
     <string name="navigation_misc_title">Misc</string>

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.komodo.settings.categories;
+package com.komodo.settings.fragments;
 
 import android.content.Context;
 import android.content.ContentResolver;
@@ -45,15 +45,19 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
 
-public class Interface extends SettingsPreferenceFragment
+public class Theming extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
 
     public static final String TAG = "Theming";
+
+    private Context mContext;
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         setRetainInstance(true);
+        mContext = getActivity();
+        getActivity().setTitle(R.string.theming_title);
 
         PreferenceScreen prefScreen = getPreferenceScreen();
         ContentResolver resolver = getActivity().getContentResolver();
@@ -76,9 +80,9 @@ public class Interface extends SettingsPreferenceFragment
 
     @Override
     protected int getPreferenceScreenResId() {
-        return R.xml.komodo_settings_interface;
+        return R.xml.komodo_settings_theming;
     }
 
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new BaseSearchIndexProvider(R.xml.komodo_settings_interface);
+            new BaseSearchIndexProvider(R.xml.komodo_settings_theming);
 }

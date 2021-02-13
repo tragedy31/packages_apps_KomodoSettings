@@ -48,7 +48,7 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.internal.logging.nano.MetricsProto;
 
 import com.komodo.settings.categories.About;
-import com.komodo.settings.categories.Interface;
+import com.komodo.settings.categories.Ui;
 import com.komodo.settings.categories.Gestures;
 import com.komodo.settings.categories.Notifications;
 import com.komodo.settings.categories.Misc;
@@ -80,7 +80,7 @@ public class KomodoSettings extends SettingsPreferenceFragment {
         } else {
              if (item.getItemId() == R.id.navigation_about) {
                 viewPager.setCurrentItem(0);
-             } else if (item.getItemId() == R.id.navigation_theming) {
+             } else if (item.getItemId() == R.id.navigation_ui) {
                 viewPager.setCurrentItem(1);
              } else if (item.getItemId() == R.id.navigation_notifications) {
                 viewPager.setCurrentItem(2);
@@ -137,7 +137,7 @@ public class KomodoSettings extends SettingsPreferenceFragment {
         PagerAdapter(FragmentManager fm) {
             super(fm);
             frags[0] = new About();
-            frags[1] = new Interface();
+            frags[1] = new Ui();
             frags[2] = new Notifications();
             frags[3] = new Gestures();
             frags[4] = new Misc();
@@ -163,7 +163,7 @@ public class KomodoSettings extends SettingsPreferenceFragment {
         String titleString[];
         titleString = new String[]{
                 getString(R.string.navigation_about_title),
-                getString(R.string.navigation_theming_title),
+                getString(R.string.navigation_ui_title),
                 getString(R.string.navigation_gesture_title),
                 getString(R.string.navigation_notification_title),
                 getString(R.string.navigation_misc_title)};

@@ -18,10 +18,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <Preference
-        android:key="interface_animation"
-        android:layout="@layout/theming_animation" />
-
     <PreferenceCategory
         android:key="brightness_slider"
         android:title="@string/qs_brightness_title">
