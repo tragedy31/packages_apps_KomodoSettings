@@ -39,12 +39,16 @@ import com.komodo.settings.preferences.CustomSeekBarPreference;
 public class QuickSettings extends SettingsPreferenceFragment implements
 OnPreferenceChangeListener {
 
+    private Context mContext;
+
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         setRetainInstance(true);
         addPreferencesFromResource(R.xml.komodo_settings_quicksettings);
         PreferenceScreen prefSet = getPreferenceScreen();
+        mContext = getActivity();
+        getActivity().setTitle(R.string.quicksettings_title);
 
         final Resources res = getResources();
         final ContentResolver resolver = getActivity().getContentResolver();

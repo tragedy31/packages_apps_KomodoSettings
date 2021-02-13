@@ -50,10 +50,14 @@ public class Theming extends SettingsPreferenceFragment
 
     public static final String TAG = "Theming";
 
+    private Context mContext;
+
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         setRetainInstance(true);
+        mContext = getActivity();
+        getActivity().setTitle(R.string.theming_title);
 
         PreferenceScreen prefScreen = getPreferenceScreen();
         ContentResolver resolver = getActivity().getContentResolver();
