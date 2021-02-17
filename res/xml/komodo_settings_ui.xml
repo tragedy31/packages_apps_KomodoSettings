@@ -26,12 +26,12 @@
         android:key="theming_category"
         android:title="@string/theming_title"
         android:fragment="com.komodo.settings.fragments.Theming"
-        android:icon="@drawable/ic_theme" />
+        android:icon="@drawable/tile_theme" />
 
     <com.komodo.settings.preferences.CardviewPreference
         android:key="quicksettings_category"
         android:title="@string/quicksettings_title"
         android:fragment="com.komodo.settings.fragments.QuickSettings"
-        android:icon="@drawable/ic_quicks" />
+        android:icon="@drawable/tile_quicks" />
 
 </PreferenceScreen>

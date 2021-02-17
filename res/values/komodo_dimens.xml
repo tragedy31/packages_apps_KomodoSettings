@@ -29,4 +29,10 @@
     
     <!-- Shortcut picker -->
     <dimen name="shortcut_picker_left_padding">70dip</dimen>
+
+    <!-- Icon tile -->
+    <dimen name="komodo_dashboard_tile_image_size">48.0dip</dimen>
+    <dimen name="komodo_dashboard_tile_foreground_image_size">36.0dip</dimen>
+    <dimen name="komodo_dashboard_tile_foreground_image_inset">6.0dip</dimen>
+
 </resources>
