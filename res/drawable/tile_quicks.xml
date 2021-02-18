@@ -21,7 +21,7 @@
         <com.android.settingslib.widget.AdaptiveIconShapeDrawable
             android:width="@dimen/komodo_dashboard_tile_image_size"
             android:height="@dimen/komodo_dashboard_tile_image_size"
-            android:color="?android:attr/colorAccent"/>
+            android:color="@color/tile_color"/>
     </item>
     <item
         android:width="@dimen/komodo_dashboard_tile_foreground_image_size"
