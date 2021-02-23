@@ -105,6 +105,7 @@ public class Interface extends SettingsPreferenceFragment
     private static final String NETWORK_TRAFFIC_HIDEARROW = "network_traffic_hidearrow";
     private static final String NETWORK_TRAFFIC_LOCATION = "network_traffic_location";
     private static final String NETWORK_TRAFFIC_REFRESH_INTERVAL = "network_traffic_refresh_interval";
+    private static final String STATUSBAR_DUAL_ROW = "statusbar_dual_row";
 
     private SystemSettingSeekBarPreference mThreshold;
     private SystemSettingSwitchPreference mNetMonitor;
@@ -113,6 +114,8 @@ public class Interface extends SettingsPreferenceFragment
     private ListPreference mNetTrafficType;
     private ListPreference mNetTrafficLayout;
     private SystemSettingSeekBarPreference mNetTrafficRefreshInterval;
+    private SystemSettingSwitchPreference mStatusbarDualRow;
+    
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -132,6 +135,12 @@ public class Interface extends SettingsPreferenceFragment
                 Settings.System.OMNI_STATUS_BAR_CUSTOM_HEADER, 0);
         mCustomHeader.setChecked(qsHeader != 0);
         mCustomHeader.setOnPreferenceChangeListener(this);
+
+        //dual Row Statusbar
+        mStatusbarDualRow = (SystemSettingSwitchPreference) findPreference(STATUSBAR_DUAL_ROW);
+        mStatusbarDualRow.setChecked((Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.STATUSBAR_DUAL_ROW, 0) == 1));
+        mStatusbarDualRow.setOnPreferenceChangeListener(this);
 
          // QS animation
         mTileAnimationStyle = (ListPreference) findPreference(PREF_TILE_ANIM_STYLE);
@@ -310,6 +319,12 @@ public class Interface extends SettingsPreferenceFragment
             Settings.System.putIntForUser(getContentResolver(),
                     Settings.System.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD, val,
                     UserHandle.USER_CURRENT);
+            return true;
+        } else if (preference == mStatusbarDualRow) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.STATUSBAR_DUAL_ROW, value ? 1 : 0);
+            //Utils.showSystemUiRestartDialog(getContext());
             return true;
         } else if (preference == mNetTrafficRefreshInterval) {
             int interval = (Integer) newValue;
