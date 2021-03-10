@@ -36,6 +36,9 @@ limitations under the License.
         <item>Rifky Mcz</item>
         <item>salmanSha08</item>
         <item>henshin</item>
+        <item>eve enryu</item>
+        <item>fais</item>
+        <item>Wahyu hidayat</item>
     </string-array>
 
     <!-- Devices maintained by maintainer -->
@@ -59,6 +62,9 @@ limitations under the License.
         <item>Realme 5 Pro (RMX1971)</item>
         <item>Xiaomi Redmi Note 3 pro (Kenzo)</item>
         <item>Realme 5/5s/5i (RMX1911/RMX2030)</item>
+        <item>Xiaomi Redmi Note 5 (whyred)</item>
+        <item>Xiaomi Redmi Note 9 (Merlin)</item>
+        <item> Asus Max Pro m2 (x01bd)</item>
     </string-array>
 
     <!-- Telegram URL of maintainer -->
@@ -83,6 +89,9 @@ limitations under the License.
         <item>https://t.me/rifky_mcz</item>
         <item>https://t.me/Salman_sha08</item>
         <item>https://t.me/henztz</item>
+        <item>https://t.me/eve_enryu</item>
+        <item>https://t.me/Droidsix</item>
+        <item>https://t.me/HayatoKazuya</item>
     </string-array>
 
 </resources>
